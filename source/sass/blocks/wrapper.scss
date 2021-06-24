@@ -1,0 +1,14 @@
+.wrapper {
+  max-width: 1440px;
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: $desktop-padding;
+  padding-right: $desktop-padding;
+
+  @include tablet {
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
+    margin: 0;
+  }
+}

@@ -1,0 +1,55 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+}
+
+.navigation ul {
+  @include list-default-remove;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navigation li {
+  padding-right: 15px;
+}
+
+.navigation a {
+  @include link-default-remove($white);
+  line-height: $link-line-height;
+  padding-left: 75px;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+
+  @include tablet {
+    padding-left: 17px;
+  }
+}
+
+.navigation span {
+  padding-left: 8px;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.navigation__icon--mail {
+  @include tablet {
+    width: 25px;
+    height: 18px;
+  }
+}
+
+.navigation__icon--phone {
+  @include tablet {
+    width: 24px;
+    height: 24px;
+  }
+}

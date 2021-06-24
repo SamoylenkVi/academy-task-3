@@ -1,8 +1,7 @@
 //Color
 $white: #ffffff;
 $black: #000000;
-$blue: #3d249b;
-$orange: #f25b24;
+$blue: #00b2ff;
 
 // Viewports
 $desktop-width: 1024px;
@@ -10,29 +9,44 @@ $tablet-width: 768px;
 $mobile-width: 320px;
 
 //Font
-$family-whitney: "Whitney", "Arial", sans-serif;
-$family-segoe: "Segoe UI", "Arial", sans-serif;
-$semibold-font-weight: 600;
+$family-roboto: "Roboto Condensed", "Arial", sans-serif;
+$family-mono: "PT Mono", "Arial", sans-serif;
+$bold-font-weight: 700;
 $regular-font-weight: 400;
-$normal-font-weight: 350;
-$light-font-weight: 325;
-$extra-font-size: 50px;
-$title-font-size: 40px;
-$offer-font-size: 34px;
-$special-font-size: 24px;
-$subtitle-font-size: 22px;
-$links-font-size: 18px;
-$default-font-size: 16px;
-$extra-line-height: 60px;
-$title-line-height: 52.42px;
-$offer-line-height: 44.56px;
-$special-line-height: 31.48px;
-$subtitle-line-height: 29.26px;
-$links-line-hiight: 23.4px;
-$default-line-height: 22.72px;
-$button-line-height: 18px;
+$extra-font-size: 80px;
+$extra-tablet-size: 60px;
+$extra-mobile-size: 40px;
+$title-font-size: 36px;
+$title-tablet-size: 32px;
+$title-mobile-size: 28px;
+$subtitle-font-size: 24px;
+$promo-font-size: 22px;
+$catalog-font-size: 20px;
+$promo-tablet-size: 18px;
+$base-font-size: 16px;
+$footer-font-size: 15px;
+$button-font-size: 14px;
+$small-font-size: 13px;
+$extra-line-height: 93px;
+$extra-tablet-height: 70px;
+$title-line-height: 50px;
+$extra-mobile-height: 46px;
+$title-tablet-height: 45px;
+$title-mobile-height: 39px;
+$promo-line-height: 34px;
+$subtitle-line-height: 33px;
+$catalog-line-height: 30px;
+$promo-tablet-height: 28px;
+$footer-line-height: 25px;
+$information-line-height: 24px;
+$base-line-height: 21px;
+$promo-button-height: 18px;
+$link-line-height: 17px;
+$button-line-height: 16px;
+$special-line-height: 15px;
+$button-Letter-spacing: 5%;
 
 //Padding
 $mobile-padding: 16px;
 $tablet-padding: 20px;
-$desktop-padding: 30px;
+$desktop-padding: 15px;
