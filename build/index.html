@@ -17,14 +17,15 @@
   <div class="page">
     <header class="header">
       <div class="header__wrapper wrapper">
-        <svg width="202" height="52" viewBox="0 0 202 52">
-          <use xlink:href="img/sprite_auto.svg#logo"></use>
-        </svg>
+        <picture>
+          <source media="(max-width: 768px)" srcset="img/logo-mobile.svg">
+          <img src="img/logo.svg" alt="Логотип cat Energy" loading="lazy">
+        </picture>
         <nav class="header__navigation navigation">
           <ul>
             <li>
               <a href="mailto:info@sd.ru">
-                <svg class="navigation__icon--mail" width="19" height="14" viewBox="0 0 19 14">
+                <svg class="navigation__mail" width="19" height="14" viewBox="0 0 19 14">
                   <use xlink:href="img/sprite_auto.svg#mail"></use>
                 </svg>
                 <span>info@sd.ru</span>
@@ -32,7 +33,7 @@
             </li>
             <li>
               <a href="tel:+74950005252">
-                <svg class="navigation__icon--phone" width="18" height="18" viewBox="0 0 18 18">
+                <svg class="navigation__phone" width="18" height="18" viewBox="0 0 18 18">
                   <use xlink:href="img/sprite_auto.svg#phone"></use>
                 </svg>
                 <span>+7 (495) 000 52 52</span>
@@ -47,28 +48,72 @@
     <div class="cont">
       <div></div>
     </div>
+    <main class="content">
+
+    </main>
     <footer class="footer">
       <div class="footer__wrapper wrapper">
-        <div class="footer__main">
-          <div class="footer__main-social">
-
-          </div>
-          <div class="footer__main-sections">
-
-          </div>
-          <div class="footer__main-address">
-
-          </div>
-
+        <div class="footer__logo">
+          <svg width="216" height="52" viewBox="0 0 216 52">
+            <use xlink:href="img/sprite_auto.svg#logo-footer"></use>
+          </svg>
+        </div>
+        <div class="footer__main-social">
+          <ul>
+            <li>
+              <svg width="27" height="27" viewBox="0 0 27 27">
+                <use xlink:href="img/sprite_auto.svg#facebook"></use>
+              </svg>
+            </li>
+            <li>
+              <svg width="27" height="26" viewBox="0 0 27 26">
+                <use xlink:href="img/sprite_auto.svg#ok"></use>
+              </svg>
+            </li>
+            <li>
+              <svg width="27" height="26" viewBox="0 0 27 26">
+                <use xlink:href="img/sprite_auto.svg#vk"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__main-sections footer__accordion">
+          <h3>Разделы сайта<button class="footer__button" type="button" aria-label="открыть меню"></button></h3>
+          <ul>
+            <li>О компании</li>
+            <li>Продукты</li>
+            <li>Производство печатных плат</li>
+            <li>Монтаж печатных плат</li>
+            <li>Комплектующие</li>
+            <li>Доставка</li>
+            <li>Контакты</li>
+          </ul>
+        </div>
+        <div class="footer__main-address footer__accordion">
+          <h3>Наш офис<button class="footer__button" type="button" aria-label="открыть меню"></button></h3>
+          <ul>
+            <li>г. Мытищи, Олимпийский проспект, д.10</li>
+            <li><a href="tel:+74955894050">+7 (495) 589-40-50</a></li>
+            <li><a href="tel:+79250038767">+7 (925) 003-87-67</a></li>
+            <li><a href="tel:+792692608079">+7 (926) 926-080-79</a></li>
+          </ul>
+        </div>
+        <div class="footer__security">
+          <p>Все права защищены</p>
+        </div>
+        <div class="footer__service">
+          <p>1999-2018 SD Service Devices</p>
         </div>
         <div class="footer__confidentiality">
-
+          <p>Условия конфиденциальности</p>
         </div>
-
+        <div class="footer__develop">
+          <p>Developed by wow studio</p>
+        </div>
       </div>
     </footer>
   </div>
-  <script src="js/script.min.js"></script>
+  <script src="js/bundle.min.js"></script>
 </body>
 
 </html>

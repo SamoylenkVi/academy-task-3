@@ -2,6 +2,9 @@
 $white: #ffffff;
 $black: #000000;
 $blue: #00b2ff;
+$grey: #1b2d37;
+$border-grey: #626962;
+$plus-grey: #c4c4c4;
 
 // Viewports
 $desktop-width: 1024px;
@@ -44,9 +47,10 @@ $promo-button-height: 18px;
 $link-line-height: 17px;
 $button-line-height: 16px;
 $special-line-height: 15px;
-$button-Letter-spacing: 5%;
+$button-Letter-spacing: 0.8px;
+$footer-letter-spacing: 0.6px;
 
 //Padding
 $mobile-padding: 16px;
-$tablet-padding: 20px;
+$tablet-padding: 25px;
 $desktop-padding: 15px;

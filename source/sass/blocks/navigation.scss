@@ -40,14 +40,14 @@
   }
 }
 
-.navigation__icon--mail {
+.navigation__mail {
   @include tablet {
     width: 25px;
     height: 18px;
   }
 }
 
-.navigation__icon--phone {
+.navigation__phone {
   @include tablet {
     width: 24px;
     height: 24px;
