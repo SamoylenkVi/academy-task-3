@@ -50,7 +50,7 @@
   @include font-options($family-roboto, $footer-font-size, $button-line-height, $regular-font-weight, $black);
   text-transform: uppercase;
   margin: 0;
-  letter-spacing: $button-Letter-spacing;
+  letter-spacing: $button-letter-spacing;
 }
 
 .footer ul {
@@ -325,8 +325,8 @@
       content: "";
       height: 1px;
       background-color: $border-grey;
-      right: -15px;
-      left: -15px;
+      right: -10px;
+      left: -10px;
     }
 
     &::before {

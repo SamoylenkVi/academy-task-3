@@ -1,12 +1,7 @@
 .page {
   @include font-options($family-mono, $base-font-size, $base-line-height, $regular-font-weight, $white);
-  background-image: url("../img/bg-promo.jpg");
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-.page button {
-  @include font-options($family-roboto, $button-font-size, $button-line-height, $bold-font-weight, $white);
-  letter-spacing: $button-Letter-spacing;
+  overflow: hidden;
 }

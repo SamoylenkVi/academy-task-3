@@ -32,7 +32,7 @@ gulp.task('css', function () {
 });
 
 gulp.task('normalize', function () {
-  return gulp.src('source/vendor/*.css')
+  return gulp.src('source/css/vendor/*.css')
       .pipe(postcss([
         autoprefixer()
       ]))

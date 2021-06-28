@@ -1,0 +1,165 @@
+.promo {
+  background-color: $promo-color;
+  background-image: url("../img/bg-promo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.promo__wrapper {
+  min-height: 881px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include tablet {
+    min-height: 685px;
+  }
+
+  @include mobile {
+    min-height: 646px;
+    align-items: flex-end;
+    padding-bottom: 69px;
+  }
+}
+
+.promo__content {
+  position: relative;
+  max-width: 770px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 43px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/promo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 713px;
+    height: 655px;
+    right: -94%;
+    top: 50%;
+    transform: translateY(-49%);
+  }
+
+  @include tablet {
+    max-width: 493px;
+    padding-top: 25px;
+
+    &::before {
+      width: 534px;
+      height: 505px;
+      background-image: url("../img/promo-tablet.png");
+      background-size: contain;
+      right: -92.2%;
+      transform: translateY(-75.7%);
+    }
+  }
+
+  @include mobile {
+    &::before {
+      width: 630px;
+      height: 482px;
+      background-image: url("../img/Group 23.png");
+      z-index: 1;
+      right: -352px;
+      transform: translateY(-96.4%);
+    }
+  }
+}
+
+.promo__content h2 {
+  @include font-options($family-roboto, $extra-font-size, $extra-line-height, $bold-font-weight, $white);
+  text-transform: uppercase;
+  letter-spacing: $title-letter-spacing;
+  margin: 0;
+  padding-bottom: 30px;
+
+  @include tablet {
+    font-size: $extra-tablet-size;
+    line-height: $extra-tablet-height;
+    letter-spacing: 4.3px;
+    padding-left: 63px;
+    padding-bottom: 29px;
+  }
+
+  @include mobile {
+    font-size: $extra-mobile-size;
+    line-height: $extra-mobile-height;
+    padding-left: 0;
+    letter-spacing: 3px;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.promo__content p {
+  font-size: $promo-font-size;
+  line-height: $promo-line-height;
+  position: relative;
+  margin: 0;
+  padding-left: 97px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 66px;
+    height: 2px;
+    top: 15px;
+    left: 3px;
+    background-color: $white;
+  }
+
+  @include tablet {
+    font-size: $promo-tablet-size;
+    line-height: $promo-tablet-height;
+    padding-left: 115px;
+
+    &::before {
+      top: 16px;
+      left: 66px;
+      width: 33px;
+    }
+  }
+
+  @include mobile {
+    font-size: $base-font-size;
+    line-height: $footer-line-height;
+    padding-left: 51px;
+    padding-right: 10px;
+
+    &::before {
+      top: 15px;
+      left: 3px;
+    }
+  }
+}
+
+.promo__button {
+  @include font-options($family-roboto, $base-font-size, $promo-button-height, $bold-font-weight, $white);
+  width: 407px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $blue;
+  text-transform: uppercase;
+  letter-spacing: $button-letter-spacing;
+  margin-top: 45px;
+  margin-left: 97px;
+
+  @include tablet {
+    width: 379px;
+    border-radius: 5px;
+    border: none;
+    align-self: flex-end;
+    margin-top: 55px;
+    margin-left: 0;
+  }
+
+  @include mobile {
+    width: 287px;
+    margin-top: 40px;
+    align-self: center;
+  }
+}

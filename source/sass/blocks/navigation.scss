@@ -15,6 +15,10 @@
 
 .navigation li {
   padding-right: 15px;
+
+  @include mobile {
+    padding-right: 11px;
+  }
 }
 
 .navigation a {
@@ -29,6 +33,10 @@
 
   @include tablet {
     padding-left: 17px;
+  }
+
+  @include mobile {
+    padding-left: 14px;
   }
 }
 
