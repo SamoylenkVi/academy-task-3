@@ -1,25 +1,33 @@
 .advantages__wrapper {
+  padding-bottom: 103px;
+
+  @include tablet {
+    padding-bottom: 54px;
+  }
+
   @include mobile {
     padding-left: 14px;
+    padding-bottom: 12px;
   }
 }
 
 .advantages ul {
+  @include list-default-remove;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 92px 126px 1px;
+  padding: 106px 126px 1px;
   grid-column-gap: 30px;
   grid-row-gap: 28px;
 
   @include tablet {
-    padding: 39px 10px 1px;
+    padding: 55px 10px 1px;
     grid-row-gap: 30px;
   }
 
   @include mobile {
     display: flex;
     flex-direction: column;
-    padding: 22px 0 1px;
+    padding: 38px 0 1px;
     gap: 0;
     margin-bottom: 20px;
   }
@@ -132,5 +140,7 @@
 }
 
 .advantages__content--hired {
-  padding-right: 9px;
+  @include mobile {
+    padding-right: 9px;
+  }
 }
