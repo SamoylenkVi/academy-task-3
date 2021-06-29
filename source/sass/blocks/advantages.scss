@@ -1,0 +1,136 @@
+.advantages__wrapper {
+  @include mobile {
+    padding-left: 14px;
+  }
+}
+
+.advantages ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 92px 126px 1px;
+  grid-column-gap: 30px;
+  grid-row-gap: 28px;
+
+  @include tablet {
+    padding: 39px 10px 1px;
+    grid-row-gap: 30px;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    padding: 22px 0 1px;
+    gap: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.advantages li {
+  min-height: 302px;
+  max-width: 570px;
+  border: 1px solid $light-grey;
+  border-left: 2px solid $blue;
+
+  &:hover {
+    background-color: $blue;
+
+    h3,
+    p,
+    svg {
+      color: $white;
+    }
+  }
+
+  @include tablet {
+    min-height: 232px;
+  }
+
+  @include mobile {
+    margin-bottom: 20px;
+  }
+}
+
+.advantages__content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+
+  @include tablet {
+    padding: 24px 19px 31px 26px;
+
+    &--time {
+      svg {
+        width: 29px;
+        height: 36px;
+      }
+    }
+
+    &--hired {
+      p {
+        padding-top: 10px;
+      }
+
+      svg {
+        width: 31px;
+        height: 32px;
+      }
+    }
+
+    &--confidentiality {
+      svg {
+        width: 30px;
+        height: 26px;
+      }
+    }
+
+    &--price {
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  @include mobile {
+    padding-bottom: 28px;
+    padding-right: 13px;
+  }
+}
+
+.advantages h3 {
+  @include font-options($family-roboto, $subtitle-font-size, $subtitle-line-height, $regular-font-weight, $blue);
+  margin: 0;
+  padding-top: 22px;
+
+  @include tablet {
+    padding-top: 8px;
+  }
+
+  @include mobile {
+    font-size: $catalog-font-size;
+    line-height: $promo-tablet-height;
+    padding-top: 13px;
+  }
+}
+
+.advantages p {
+  padding-top: 18px;
+  color: $black;
+  margin: 0;
+
+  @include tablet {
+    padding-top: 9px;
+  }
+
+  @include mobile {
+    padding-top: 14px;
+  }
+}
+
+.advantages svg {
+  color: $blue;
+}
+
+.advantages__content--hired {
+  padding-right: 9px;
+}

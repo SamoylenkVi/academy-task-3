@@ -27,7 +27,7 @@
   max-width: 770px;
   display: flex;
   flex-direction: column;
-  padding-top: 43px;
+  padding-top: 38px;
 
   &::before {
     position: absolute;
@@ -43,7 +43,7 @@
   }
 
   @include tablet {
-    max-width: 493px;
+    max-width: 502px;
     padding-top: 25px;
 
     &::before {
@@ -51,7 +51,7 @@
       height: 505px;
       background-image: url("../img/promo-tablet.png");
       background-size: contain;
-      right: -92.2%;
+      right: -91.2%;
       transform: translateY(-75.7%);
     }
   }
@@ -73,13 +73,13 @@
   text-transform: uppercase;
   letter-spacing: $title-letter-spacing;
   margin: 0;
-  padding-bottom: 30px;
+  padding-bottom: 28px;
 
   @include tablet {
     font-size: $extra-tablet-size;
     line-height: $extra-tablet-height;
     letter-spacing: 4.3px;
-    padding-left: 63px;
+    padding-left: 73px;
     padding-bottom: 29px;
   }
 
@@ -113,11 +113,11 @@
   @include tablet {
     font-size: $promo-tablet-size;
     line-height: $promo-tablet-height;
-    padding-left: 115px;
+    padding-left: 124px;
 
     &::before {
       top: 16px;
-      left: 66px;
+      left: 76px;
       width: 33px;
     }
   }
@@ -145,7 +145,7 @@
   background-color: $blue;
   text-transform: uppercase;
   letter-spacing: $button-letter-spacing;
-  margin-top: 45px;
+  margin-top: 41px;
   margin-left: 97px;
 
   @include tablet {

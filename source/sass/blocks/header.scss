@@ -8,6 +8,7 @@
   background-color: transparent;
   padding-left: 15px;
   padding-right: 15px;
+  z-index: 2;
 
   @include tablet {
     top: 19px;
