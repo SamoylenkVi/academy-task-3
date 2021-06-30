@@ -1,7 +1,15 @@
 .company-information__wrapper {
-  min-height: 528px;
+  min-height: 417px;
   display: flex;
   justify-content: center;
+
+  @include tablet {
+    min-height: 435px;
+  }
+
+  @include mobile {
+    min-height: 546px;
+  }
 }
 
 .company-information__content {
@@ -48,6 +56,21 @@
   }
 }
 
+.company-information p {
+  margin: 0;
+  padding-bottom: 23px;
+
+  @include tablet {
+    padding-bottom: 26px;
+    padding-left: 2px;
+  }
+
+  @include mobile {
+    padding-bottom: 22px;
+    padding-top: 23px;
+  }
+}
+
 .company-information h2 {
   @include font-options($family-roboto, $title-font-size, $title-line-height, $regular-font-weight, $base-color);
   margin: 0;
@@ -63,21 +86,6 @@
     font-size: $title-mobile-size;
     line-height: $title-mobile-height;
     padding-bottom: 0;
-  }
-}
-
-.company-information p {
-  margin: 0;
-  padding-bottom: 23px;
-
-  @include tablet {
-    padding-bottom: 26px;
-    padding-left: 2px;
-  }
-
-  @include mobile {
-    padding-bottom: 22px;
-    padding-top: 23px;
   }
 }
 

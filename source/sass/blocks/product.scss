@@ -1,0 +1,149 @@
+.product {
+  @include font-options($family-roboto, $catalog-font-size, $catalog-line-height, $regular-font-weight, $white);
+  background-color: $dark-grey;
+  min-height: 938px;
+}
+
+.product__wrapper {
+  padding-top: 88px;
+
+  @include tablet {
+    padding-top: 50px;
+  }
+}
+
+.product h2 {
+  margin: 0;
+  padding-left: 125px;
+  font-size: $title-font-size;
+  line-height: $title-line-height;
+  font-weight: $regular-font-weight;
+  letter-spacing: normal;
+
+  @include tablet {
+    font-size: $title-tablet-size;
+    line-height: $title-tablet-height;
+    padding-left: 9px;
+    padding-right: 99px;
+  }
+
+  @include mobile {
+    font-size: $title-mobile-size;
+    line-height: $title-mobile-height;
+    padding-left: 9px;
+    padding-right: 0;
+  }
+}
+
+.product ul {
+  @include list-default-remove;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 54px 125px 0;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 49px 9px 0 11px;
+    gap: 0;
+  }
+
+  @include mobile {
+    padding: 42px 0 0 0;
+  }
+}
+
+.product a {
+  @include link-default-remove;
+  display: flex;
+  min-height: 620px;
+  position: relative;
+  background-repeat: no-repeat;
+
+  &::before {
+    position: absolute;
+    content: ">";
+    width: 63px;
+    height: 63px;
+    background-color: $blue;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+  }
+
+  &:hover {
+    opacity: 50%;
+  }
+
+  &:active {
+    opacity: 20%;
+  }
+
+  @include tablet {
+    background-size: cover;
+    min-height: 256px;
+  }
+}
+
+.product__card {
+  @include tablet {
+    padding-bottom: 46px;
+  }
+
+  @include mobile {
+    padding-bottom: 30px;
+  }
+}
+
+.product__card--production a {
+  background-image: url("../img/production.png");
+
+  @include tablet {
+    background-image: url("../img/production-tablet.png");
+  }
+}
+
+.product__card--installation a {
+  background-image: url("../img/installation.png");
+
+  @include tablet {
+    background-image: url("../img/installation-tablet.png");
+  }
+}
+
+.product__card--lighting a {
+  background-image: url("../img/lighting.png");
+
+  @include tablet {
+    background-image: url("../img/lighting-tablet.png");
+  }
+}
+
+.product p {
+  margin: 0;
+  padding: 50px 10px 31px 43px;
+  max-width: 220px;
+
+  @include tablet {
+    padding: 40px 10px 31px 44px;
+  }
+
+  @include mobile {
+    padding: 19px 14px 29px 35px;
+  }
+}
+
+.product__card--lighting p {
+  @include tablet {
+    padding-top: 50px;
+  }
+
+  @include mobile {
+    padding-top: 30px;
+  }
+}
