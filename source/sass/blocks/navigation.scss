@@ -17,6 +17,11 @@
   padding-right: 15px;
   padding-bottom: 6px;
 
+  @include tablet {
+    padding-right: 14px;
+    padding-bottom: 3px;
+  }
+
   @include mobile {
     padding-right: 11px;
   }
@@ -30,6 +35,10 @@
   &:hover,
   &:focus {
     color: $blue;
+  }
+
+  &:active {
+    opacity: 30%;
   }
 
   @include tablet {

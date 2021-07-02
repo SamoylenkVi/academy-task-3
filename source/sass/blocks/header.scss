@@ -34,12 +34,12 @@
   outline: none;
   border: 1px solid $white;
   border-radius: 5px;
+  cursor: pointer;
 
   &:hover,
   &focus {
     color: $blue;
     border-color: $blue;
-    cursor: pointer;
   }
 
   &:active {

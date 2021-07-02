@@ -42,6 +42,7 @@
   }
 
   @include mobile {
+    padding-top: 46px;
     grid-template-columns: 1fr;
   }
 }
@@ -71,6 +72,19 @@
   letter-spacing: $footer-letter-spacing;
 }
 
+.footer a {
+  @include link-default-remove($grey);
+
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+}
+
 .footer__logo {
   grid-area: 1 / 1 / 2/ 3;
   align-self: center;
@@ -78,7 +92,8 @@
 
   @include tablet {
     grid-area: 1 / 1 / 2/ 4;
-    padding-top: 3px;
+    padding-top: 0;
+    padding-left: 13px;
   }
 
   @include mobile {
@@ -87,6 +102,7 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 26px;
+    padding-left: 0;
   }
 }
 
@@ -110,7 +126,7 @@
   padding-bottom: 60px;
 
   @include tablet {
-    padding: 33px 8px 30px 5px;
+    padding: 30px 0 30px 5px;
     justify-content: flex-end;
   }
 
@@ -123,6 +139,18 @@
 
 .footer__main-social li {
   margin-right: 15px;
+
+  @include tablet {
+    margin-right: 13px;
+  }
+
+  @include mobile {
+    margin-right: 15px;
+  }
+}
+
+.footer__main-social a {
+  color: $icons-grey;
 }
 
 .footer__main-sections {
@@ -131,7 +159,7 @@
 
   @include tablet {
     grid-area: 2 / 1 / 3/ 5;
-    padding: 39px 5px 35px 2px;
+    padding: 39px 5px 35px 15px;
   }
 
   @include mobile {
@@ -173,7 +201,7 @@
 
   @include tablet {
     grid-area: 2 / 5 / 3/ 9;
-    padding: 40px 2px 13px 4px;
+    padding: 40px 2px 13px 17px;
   }
 
   @include mobile {
@@ -196,20 +224,7 @@
   padding-top: 24px;
 
   @include mobile {
-    padding: 0 10px 26px 0;
-  }
-}
-
-.footer__main-address a {
-  @include link-default-remove($grey);
-
-  &:hover,
-  &:focus {
-    color: $blue;
-  }
-
-  &:active {
-    opacity: 30%;
+    padding: 0 10px 27px 0;
   }
 }
 
@@ -232,13 +247,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 6px;
+    padding-left: 27px;
     padding-top: 0;
   }
 
   @include mobile {
     grid-area: 2 / 1 / 3/ 2;
     padding-right: 6px;
+    padding-left: 7px;
   }
 }
 
@@ -250,7 +266,7 @@
   @include tablet {
     grid-area: 3/ 1/ 4/ 5;
     margin-right: auto;
-    padding-left: 0;
+    padding-left: 14px;
     padding-top: 23px;
     display: flex;
     align-items: center;
@@ -261,12 +277,13 @@
     margin: 0;
     justify-content: center;
     padding-top: 0;
+    padding-left: 5px;
   }
 }
 
 .footer__confidentiality p {
   @include mobile {
-    padding-top: 30px;
+    padding-top: 28px;
   }
 }
 
@@ -280,7 +297,7 @@
     display: flex;
     align-items: center;
     padding-top: 23px;
-    padding-right: 24px;
+    padding-right: 11px;
   }
 
   @include mobile {

@@ -2,6 +2,10 @@
   @include font-options($family-roboto, $catalog-font-size, $catalog-line-height, $regular-font-weight, $white);
   background-color: $dark-grey;
   min-height: 938px;
+
+  @include tablet {
+    padding-bottom: 32px;
+  }
 }
 
 .product__wrapper {
@@ -103,24 +107,48 @@
 .product__card--production a {
   background-image: url("../img/production.png");
 
+  @include retina {
+    background-image: url("../img/production@2x.png");
+  }
+
   @include tablet {
     background-image: url("../img/production-tablet.png");
+
+    @include retina {
+      background-image: url("../img/production-tablet@2x.png");
+    }
   }
 }
 
 .product__card--installation a {
   background-image: url("../img/installation.png");
 
+  @include retina {
+    background-image: url("../img/installation@2x.png");
+  }
+
   @include tablet {
     background-image: url("../img/installation-tablet.png");
+
+    @include retina {
+      background-image: url("../img/installation-tablet@2x.png");
+    }
   }
 }
 
 .product__card--lighting a {
   background-image: url("../img/lighting.png");
 
+  @include retina {
+    background-image: url("../img/lighting@2x.png");
+  }
+
   @include tablet {
     background-image: url("../img/lighting-tablet.png");
+
+    @include retina {
+      background-image: url("../img/lighting-tablet@2x.png");
+    }
   }
 }
 

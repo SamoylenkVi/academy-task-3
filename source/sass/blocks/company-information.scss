@@ -32,6 +32,10 @@
     top: 2px;
     left: -210px;
     z-index: -1;
+
+    @include retina {
+      background-image: url("../img/company@2x.jpg");
+    }
   }
 
   @include tablet {
@@ -104,6 +108,16 @@
   border-radius: 5px;
   background-color: inherit;
   margin-top: 17px;
+
+  &:hover,
+  &focus {
+    color: $hover-blue;
+    border-color: $hover-blue;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 
   @include mobile {
     margin-top: 13px;

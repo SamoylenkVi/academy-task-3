@@ -3,6 +3,11 @@
   background-image: url("../img/bg-promo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+
+  @include retina {
+    background-image: url("../img/bg-promo@2x.jpg");
+  }
 }
 
 .promo__wrapper {
@@ -40,6 +45,10 @@
     right: -94%;
     top: 50%;
     transform: translateY(-49%);
+
+    @include retina {
+      background-image: url("../img/promo@2x.png");
+    }
   }
 
   @include tablet {
@@ -53,6 +62,10 @@
       background-size: contain;
       right: -91.2%;
       transform: translateY(-75.7%);
+
+      @include retina {
+        background-image: url("../img/promo-tablet@2x.png");
+      }
     }
   }
 
@@ -64,6 +77,10 @@
       z-index: 1;
       right: -352px;
       transform: translateY(-96.4%);
+
+      @include retina {
+        background-image: url("../img/promo-mob@2x.png");
+      }
     }
   }
 }
@@ -135,8 +152,33 @@
   }
 }
 
-.promo__button {
+.promo a {
+  @include link-default-remove;
+  font-size: $button-font-size;
+  line-height: $button-line-height;
+  position: absolute;
+  bottom: 14.9%;
+  left: 11.4%;
+  transform: rotate(-90deg);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $hover-blue;
+  }
+
+  &:active {
+    opacity: 50%;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.promo__content a {
   @include font-options($family-roboto, $base-font-size, $promo-button-height, $bold-font-weight, $white);
+  position: static;
   width: 407px;
   height: 55px;
   display: flex;
@@ -147,6 +189,19 @@
   letter-spacing: $button-letter-spacing;
   margin-top: 41px;
   margin-left: 97px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: rotate(0);
+
+  &:hover,
+  &:focus {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 20%;
+  }
 
   @include tablet {
     width: 379px;
