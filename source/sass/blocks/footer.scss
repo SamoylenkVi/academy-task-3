@@ -2,7 +2,6 @@
   position: relative;
   flex: 0 0 auto;
   background-color: $white;
-  color: $grey;
   min-height: 316px;
 
   &::after {
@@ -61,7 +60,7 @@
 .footer li {
   font-size: $footer-font-size;
   line-height: $footer-line-height;
-  color: $grey;
+  color: $base-color;
 }
 
 .footer p {
@@ -73,7 +72,7 @@
 }
 
 .footer a {
-  @include link-default-remove($grey);
+  @include link-default-remove($base-color);
 
   &:hover,
   &:focus {
@@ -288,6 +287,10 @@
 }
 
 .footer__develop {
+  font-size: $small-font-size;
+  line-height: $information-line-height;
+  text-transform: uppercase;
+  letter-spacing: $footer-letter-spacing;
   grid-area: 3/ 7/ 4/ 9;
   margin-left: auto;
   padding-top: 14px;

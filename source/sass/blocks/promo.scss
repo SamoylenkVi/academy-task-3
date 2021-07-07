@@ -27,61 +27,62 @@
   }
 }
 
+.promo__image {
+  position: absolute;
+  right: -94%;
+  top: 50%;
+  transform: translateY(-35%);
+  background-image: url("../img/bg-promo.svg");
+  background-position: -23% 116%;
+  z-index: 0;
+
+  @include tablet {
+    right: -103%;
+    transform: translateY(-61.3%);
+    width: 582px;
+    height: 505px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/bg-promo-tablet.svg");
+    background-position: -264% 84%;
+  }
+
+  @include mobile {
+
+    width: 502px;
+    height: 506px;
+    right: -43%;
+    background-image: url("../img/bg-promo-mob.svg");
+    background-repeat: no-repeat;
+    transform: translateY(-92.3%);
+    background-position: 223px 2px;
+  }
+}
+
+.promo__image img {
+  @include tablet {
+    width: 465px;
+    height: 340px;
+  }
+
+  @include mobile {
+    width: 301px;
+    height: 220px;
+  }
+}
+
 .promo__content {
   position: relative;
   max-width: 770px;
   display: flex;
   flex-direction: column;
   padding-top: 38px;
-
-  &::before {
-    position: absolute;
-    content: "";
-    background-image: url("../img/promo.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 713px;
-    height: 655px;
-    right: -94%;
-    top: 50%;
-    transform: translateY(-49%);
-
-    @include retina {
-      background-image: url("../img/promo@2x.png");
-    }
-  }
+  z-index: 2;
 
   @include tablet {
     max-width: 502px;
     padding-top: 25px;
-
-    &::before {
-      width: 534px;
-      height: 505px;
-      background-image: url("../img/promo-tablet.png");
-      background-size: contain;
-      right: -91.2%;
-      transform: translateY(-75.7%);
-
-      @include retina {
-        background-image: url("../img/promo-tablet@2x.png");
-      }
-    }
-  }
-
-  @include mobile {
-    &::before {
-      width: 630px;
-      height: 482px;
-      background-image: url("../img/promo-mob.png");
-      z-index: 1;
-      right: -352px;
-      transform: translateY(-96.4%);
-
-      @include retina {
-        background-image: url("../img/promo-mob@2x.png");
-      }
-    }
   }
 }
 
@@ -216,5 +217,21 @@
     width: 287px;
     margin-top: 40px;
     align-self: center;
+  }
+}
+
+.promo__content span {
+  &:last-child {
+    display: none;
+  }
+
+  @include mobile {
+    &:first-child {
+      display: none;
+    }
+
+    &:last-child {
+      display: block;
+    }
   }
 }

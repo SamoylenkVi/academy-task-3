@@ -17,6 +17,7 @@
   <div class="page">
     <header class="header">
       <div class="header__wrapper wrapper">
+        <!-- tablet: 202px; mob: 38px -->
         <picture>
           <source media="(max-width: 768px)" srcset="img/logo-mobile.svg">
           <img src="img/logo.svg" alt="Логотип Smart Device" loading="lazy">
@@ -49,9 +50,19 @@
       <section class="promo">
         <div class="promo__wrapper wrapper">
           <div class="promo__content">
+            <div class="promo__image">
+              <!-- 1х: 705px; 2x: 1410px -->
+              <picture>
+                <source type="image/webp" srcset="img/promo.webp 1x, img/promo@2x.webp 2x">
+                <img src="img/promo.png" srcset="img/promo@2x.png" width="705" height="515" alt="Печатнfz платf" loading="lazy">
+              </picture>
+            </div>
             <h2>Печатные платы</h2>
             <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <a href="#form" aria-label="Бесплатная консультация">Получить бесплатную консультацию</a>
+            <a href="#form" aria-label="Бесплатная консультация">
+              <span>Получить бесплатную консультацию</span>
+              <span>Бесплатная консультация</span>
+            </a>
           </div>
           <a href="#advantages">Скролл вниз</a>
         </div>
@@ -106,7 +117,7 @@
             <h2>О компании</h2>
             <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
             <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог <span>(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России</span></p>
-            <button type="button" class="company-information__button button">Подробнее</button>
+            <a href="#" class="company-information__button button">Подробнее</a>
           </div>
         </div>
       </section>
@@ -116,21 +127,36 @@
           <ul>
             <li>
               <div class="product__card product__card--production">
-                <a href="">
+                <a href="#">
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <picture>
+                    <source type="image/webp" srcset="img/production.webp 1x, img/production@2x.webp 2x">
+                    <img src="img/production.png" srcset="img/production@2x.png" width="370" height="620" alt="Печатные платы" loading="lazy">
+                  </picture>
                   <p>Производство печатных плат</p>
                 </a>
               </div>
             </li>
             <li>
               <div class="product__card product__card--installation">
-                <a href="">
+                <a href="#">
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <picture>
+                    <source type="image/webp" srcset="img/installation.webp 1x, img/installation@2x.webp 2x">
+                    <img src="img/installation.png" srcset="img/installation@2x.png" width="370" height="620" alt="Печатные платы" loading="lazy">
+                  </picture>
                   <p>Монтаж печатных плат</p>
                 </a>
               </div>
             </li>
             <li>
               <div class="product__card product__card--lighting">
-                <a href="">
+                <a href="#">
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <picture>
+                    <source type="image/webp" srcset="img/lighting.webp 1x, img/lighting@2x.webp 2x">
+                    <img src="img/lighting.png" srcset="img/lighting@2x.png" width="370" height="620" alt="Светодиодная лента" loading="lazy">
+                  </picture>
                   <p>Комплектующие для светотехники</p>
                 </a>
               </div>
@@ -172,21 +198,21 @@
         <div class="footer__main-social">
           <ul>
             <li>
-              <a href="" aria-label="Наша страница на facebook">
+              <a href="#" aria-label="Наша страница на facebook">
                 <svg width="27" height="27" viewBox="0 0 27 27">
                   <use xlink:href="img/sprite_auto.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a href="" aria-label="Наша страница на одноклассниках">
+              <a href="#" aria-label="Наша страница на одноклассниках">
                 <svg width="27" height="26" viewBox="0 0 27 26">
                   <use xlink:href="img/sprite_auto.svg#ok"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a href="" aria-label="Наша страница в vk">
+              <a href="#" aria-label="Наша страница в vk">
                 <svg width="27" height="26" viewBox="0 0 27 26">
                   <use xlink:href="img/sprite_auto.svg#vk"></use>
                 </svg>
@@ -225,7 +251,7 @@
           <p>Условия конфиденциальности</p>
         </div>
         <div class="footer__develop">
-          <p>Developed by wow studio</p>
+          <a href="#">Developed by wow studio</a>
         </div>
       </div>
     </footer>
@@ -255,7 +281,7 @@
       </div>
     </div>
   </section>
-  <script src="js/bundle.min.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>

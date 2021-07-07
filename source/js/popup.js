@@ -1,6 +1,6 @@
 'use strict';
 
-const Keys = {
+const keys = {
   ESCAPE: 'Escape',
   ESC: 'Esc',
 };
@@ -34,7 +34,7 @@ const closePopupHandler = (evt) => {
 };
 
 const escapeKeydownHandler = (evt) => {
-  if (evt.key === Keys.ESCAPE || evt.key === Keys.ESC) {
+  if (evt.key === keys.ESCAPE || evt.key === keys.ESC) {
     closePopupHandler(evt);
   }
 };

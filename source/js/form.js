@@ -40,6 +40,15 @@ const maskPhoneHandler = (evt) => {
   }
 };
 
+const toggleValidation = (input, isValid) => {
+
+  if (!isValid) {
+    input.classList.add('invalid');
+  } else {
+    input.classList.remove('invalid');
+  }
+};
+
 const validate = (inputPhone, inputName, form) => {
   if (inputPhone) {
     inputPhone.addEventListener('focus', focusPhoneHandler);
@@ -56,17 +65,9 @@ const validate = (inputPhone, inputName, form) => {
         evt.preventDefault();
       }
 
-      if (!isPhoneValid) {
-        inputPhone.classList.add('invalid');
-      } else {
-        inputPhone.classList.remove('invalid');
-      }
+      toggleValidation(inputPhone, isPhoneValid);
+      toggleValidation(inputName, isNameValid);
 
-      if (!isNameValid) {
-        inputName.classList.add('invalid');
-      } else {
-        inputName.classList.remove('invalid');
-      }
     });
   }
 };

@@ -97,7 +97,7 @@ gulp.task('html', function () {
 gulp.task('script', function () {
   return gulp.src('source/js/**/*.js')
       .pipe(sourcemap.init())
-      .pipe(concat('bundle.min.js'))
+      .pipe(concat('main.min.js'))
       .pipe(uglify())
       .pipe(sourcemap.write())
       .pipe(gulp.dest('build/js'))
