@@ -14,17 +14,20 @@
 }
 
 .navigation li {
-  padding-right: 15px;
+  padding-right: 14px;
   padding-bottom: 6px;
 
   @include tablet {
-    padding-right: 14px;
     padding-bottom: 3px;
   }
 
   @include mobile {
     padding-right: 11px;
   }
+}
+
+.navigation svg {
+  color: $blue;
 }
 
 .navigation a {
@@ -34,11 +37,11 @@
 
   &:hover,
   &:focus {
-    color: $blue;
+    opacity: 70%;
   }
 
   &:active {
-    opacity: 30%;
+    opacity: 20%;
   }
 
   @include tablet {

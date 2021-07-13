@@ -8,7 +8,7 @@
   background-color: transparent;
   padding-left: 15px;
   padding-right: 15px;
-  z-index: 2;
+  z-index: 5;
 
   @include tablet {
     top: 19px;
@@ -23,6 +23,10 @@
   }
 }
 
+.header picture {
+  flex-shrink: 0;
+}
+
 .header__button {
   width: 180px;
   height: 45px;
@@ -35,9 +39,10 @@
   border: 1px solid $white;
   border-radius: 5px;
   cursor: pointer;
+  flex-shrink: 0;
 
   &:hover,
-  &focus {
+  &:focus {
     color: $blue;
     border-color: $blue;
   }

@@ -1,14 +1,14 @@
 .company-information__wrapper {
-  min-height: 417px;
+  padding-bottom: 111px;
   display: flex;
   justify-content: center;
 
   @include tablet {
-    min-height: 435px;
+    padding-bottom: 82px;
   }
 
   @include mobile {
-    min-height: 546px;
+    padding-bottom: 0;
   }
 }
 
@@ -52,7 +52,7 @@
   @include mobile {
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0 0 65px;
 
     &::before {
       display: none;
@@ -114,7 +114,7 @@
   align-items: center;
 
   &:hover,
-  &focus {
+  &:focus {
     color: $hover-blue;
     border-color: $hover-blue;
   }

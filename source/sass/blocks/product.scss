@@ -1,7 +1,7 @@
 .product {
   @include font-options($family-roboto, $catalog-font-size, $catalog-line-height, $regular-font-weight, $white);
   background-color: $dark-grey;
-  min-height: 938px;
+
 
   @include tablet {
     padding-bottom: 32px;
@@ -11,9 +11,11 @@
 .product__wrapper {
   padding-top: 88px;
   max-width: 1190px;
+  padding-bottom: 127px;
 
   @include tablet {
     padding-top: 50px;
+    padding-bottom: 0;
   }
 }
 
@@ -80,7 +82,8 @@
     color: $white;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 50%;
   }
 
