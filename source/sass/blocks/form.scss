@@ -229,6 +229,14 @@
   }
 }
 
+.invalid label {
+  color: $invalid;
+}
+
+.invalid input + label::before {
+  border: 1px solid $invalid;
+}
+
 .form__agreement input:checked + label::before {
   background-image: url("../img/checked.svg");
   background-repeat: no-repeat;
@@ -237,7 +245,7 @@
 
 .form__agreement input:hover + label::before,
 .form__agreement input:focus + label::before {
-  opacity: 30%;
+  transform: scale(1.5);
 }
 
 .form__button {

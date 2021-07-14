@@ -13,11 +13,13 @@ const regexPhoneInput = new RegExp(/\+?7?\(?([0-9]{0,3})\)?([0-9]{0,3})\-?([0-9]
 const mainForm = document.querySelector('section.form form');
 const mainPhone = mainForm.querySelector('#phone');
 const mainName = mainForm.querySelector('#name');
+const mainAgreementCheck = mainForm.querySelector('.form__agreement');
 const mainCheckbox = mainForm.querySelector('#agreement');
 const popupForm = document.querySelector('section.popup form');
 const popupPhone = popupForm.querySelector('#popup-phone');
 const popupName = popupForm.querySelector('#popup-name');
 const popupCheckbox = popupForm.querySelector('#popup-agreement');
+const popupAgreementCheck = popupForm.querySelector('.popup__agreement');
 const popupQuestion = popupForm.querySelector('#popup-question');
 
 const focusPhoneHandler = (evt) => {
@@ -50,7 +52,6 @@ const maskPhoneHandler = (evt) => {
 };
 
 const toggleValidation = (input, isValid) => {
-
   if (!isValid) {
     input.classList.add('invalid');
   } else {
@@ -58,27 +59,28 @@ const toggleValidation = (input, isValid) => {
   }
 };
 
-const submitFormHandler = (inputPhone, inputName, inputCheckbox, evt) => {
+const submitFormHandler = (inputPhone, inputName, inputCheckbox, wrapperCheckbox, evt) => {
   const isPhoneValid = inputPhone.value.search(regexPhoneSubmit) !== -1;
   const isNameValid = inputName.value.length !== 0;
+  const isCheckboxValid = inputCheckbox.checked;
 
-  if (!isPhoneValid || !isNameValid || !inputCheckbox.checked) {
+  if (!isPhoneValid || !isNameValid || !isCheckboxValid) {
     evt.preventDefault();
   }
-
+  toggleValidation(wrapperCheckbox, isCheckboxValid);
   toggleValidation(inputPhone, isPhoneValid);
   toggleValidation(inputName, isNameValid);
 };
 
-const validate = (inputPhone, inputName, inputCheckbox, form) => {
+const validate = (inputPhone, inputName, inputCheckbox, wrapperCheckbox, form) => {
   if (inputPhone) {
     inputPhone.addEventListener('focus', focusPhoneHandler);
     inputPhone.addEventListener('input', maskPhoneHandler);
   }
-  if (form && inputName && inputPhone) {
+  if (form && inputName && inputPhone && inputCheckbox) {
     form.setAttribute('novalidate', 'novalidate');
     form.addEventListener('submit', (evt) => {
-      submitFormHandler(inputPhone, inputName, inputCheckbox, evt);
+      submitFormHandler(inputPhone, inputName, inputCheckbox, wrapperCheckbox, evt);
     });
   }
 };
@@ -95,8 +97,8 @@ const setLocalStorage = (element, storageKey) => {
   }
 };
 
-validate(mainPhone, mainName, mainCheckbox, mainForm);
-validate(popupPhone, popupName, popupCheckbox, popupForm);
+validate(mainPhone, mainName, mainCheckbox, mainAgreementCheck, mainForm);
+validate(popupPhone, popupName, popupCheckbox, popupAgreementCheck, popupForm);
 
 setLocalStorage(popupPhone, StorageKey.PHONE_NUMBER);
 setLocalStorage(popupName, StorageKey.USER_NAME);

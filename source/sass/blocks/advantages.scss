@@ -51,10 +51,6 @@
     }
   }
 
-  &:focus {
-    outline: none;
-  }
-
   @include tablet {
     min-height: 232px;
   }
