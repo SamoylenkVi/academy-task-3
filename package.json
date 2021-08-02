@@ -1,7 +1,7 @@
 {
-  "name": "Liga-A-start-template",
+  "name": "template",
   "version": "1.0.0",
-  "description": "Стартовый шаблон сборки Лиги А",
+  "description": "Стартовый шаблон",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
@@ -51,8 +51,6 @@
     "node": "8.15"
   },
   "dependencies": {
-    "del": "^4.1.1",
-    "focus-trap": "^6.6.0",
-    "gulp-uglify-es": "^2.0.0"
+    "del": "^4.1.1"
   }
 }
