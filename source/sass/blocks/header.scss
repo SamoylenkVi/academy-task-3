@@ -1,0 +1,12 @@
+.header__user-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header__user-navigation svg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}

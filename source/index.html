@@ -1,12 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Jewellery</title>
+  <link rel="stylesheet" href="./css/vendor/normalize.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorantGaramond-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorantGaramond-semiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorantGaramond-italic.woff2" as="font" type="font/woff2" crossorigin>
 </head>
-<body>
 
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="header__wrapper wrapper">
+        <div class="header__user-navigation">
+          <div class="header__search">
+            <label for="site-search"></label>
+            <input type="search" id="site-search" name="search" placeholder="Type here to search" aria-label="Search through site content">
+          </div>
+          <svg width="66" height="66" viewBox="0 0 66 66">
+            <use xlink:href="img/sprite_auto.svg#logo"></use>
+          </svg>
+          <ul>
+            <li>
+              <a>Login</a>
+            </li>
+            <li>
+              <a>Cart</a>
+            </li>
+          </ul>
+        </div>
+        <nav class="header__site-navigation navigation">
+          <ul>
+            <li><a href="">What’s new</a></li>
+            <li><a href="">Chokers</a></li>
+            <li><a href=""></a>Necklaces</li>
+            <li><a href=""></a>Rings</li>
+            <li><a href=""></a>Earrings</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="content">
+      <h1 class="visually-hidden">Jewellery</h1>
+      <section class="promo">
+        <div class="promo__wrapper wrapper">
+          <h2>perfection</h2>
+          <p>made to be yours</p>
+        </div>
+      </section>
+      <section class="slider">
+        <div class="slider__wrapper wrapper">
+          <h2>New In</h2>
+          <div class="slider__toggle">
+            <button class="slider__back" type="button"></button>
+            <button class="slider__forward" type="button"></button>
+          </div>
+          <a href="#">Shop Now</a>
+          <ul>
+            <li>
+              <!-- 1х: 270px; 2x: 540px -->
+              <picture>
+                <source type="image/webp" srcset="img/purple-gemstone-necklace.webp 1x, img/purple-gemstone-necklace@2x.webp 2x">
+                <img src="img/purple-gemstone-necklace.png" srcset="img/purple-gemstone-necklace@2x.png" width="270" height="284" alt="Подвеска с фиолетовым камнем" loading="lazy">
+              </picture>
+              <p>Necklace with amethyst</p>
+              <span>$ 145</span>
+            </li>
+            <li>
+              <!-- 1х: 270px; 2x: 540px -->
+              <picture>
+                <source type="image/webp" srcset="img/layered-choker-necklace.webp 1x, img/layered-choker-necklace@2x.webp 2x">
+                <img src="img/layered-choker-necklace.png" srcset="img/layered-choker-necklace@2x.png" width="270" height="284" alt="Чокер с кулоном в форме треугольника" loading="lazy">
+              </picture>
+              <p>Layered сhoker</p>
+              <span>$ 115</span>
+            </li>
+            <li>
+              <!-- 1х: 270px; 2x: 540px -->
+              <picture>
+                <source type="image/webp" srcset="img/dainty-gold-necklace.webp 1x, img/dainty-gold-necklace@2x.webp 2x">
+                <img src="img/dainty-gold-necklace.png" srcset="img/dainty-gold-necklace@2x.png" width="270" height="284" alt="Золотая подвеска" loading="lazy">
+              </picture>
+              <p>Gold chain</p>
+              <span>$ 215</span>
+            </li>
+            <li>
+              <!-- 1х: 270px; 2x: 540px -->
+              <picture>
+                <source type="image/webp" srcset="img/galaxy-earrings.webp 1x, img/galaxy-earrings@2x.webp 2x">
+                <img src="img/galaxy-earrings.png" srcset="img/galaxy-earrings@2x.png" width="270" height="284" alt="Серьги с камнем цвета космос" loading="lazy">
+              </picture>
+              <p>Galaxy earrings</p>
+              <span>$ 95</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
+
 </html>

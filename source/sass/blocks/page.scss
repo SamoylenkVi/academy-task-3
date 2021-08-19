@@ -1,0 +1,7 @@
+.page {
+  @include font-options($family-poppins, $base-font-size, $base-line-height, $regular-font-weight, $base-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
