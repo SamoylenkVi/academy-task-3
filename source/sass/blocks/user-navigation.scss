@@ -1,0 +1,73 @@
+.user-navigation {
+  @include tablet {
+    order: 3;
+  }
+}
+
+.user-navigation ul {
+  @include list-default-remove;
+  display: flex;
+  flex-direction: row;
+  font-size: $link-font-size;
+  line-height: $link-line-height;
+
+  @include tablet {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  @include mobile {
+    padding-bottom: 30px;
+  }
+}
+
+.user-navigation li {
+  margin-left: 38px;
+  padding-top: 0;
+
+  @include tablet {
+    padding-top: 25px;
+    margin: 0;
+  }
+
+  @include mobile {
+    padding-top: 15px;
+  }
+}
+
+.user-navigation a {
+  @include link-default-remove;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $checked-brown;
+  }
+
+  &:active {
+    color: $login-brown;
+  }
+
+  @include tablet {
+    font-size: $questions-font-size;
+    line-height: $questions-line-height;
+    color: $white;
+    display: block;
+    width: 100%;
+
+    &:hover,
+    &:focus {
+      color: $catalog-brown;
+    }
+
+    &:active {
+      opacity: 30%;
+    }
+  }
+}
+
+.user-navigation__сart {
+  @include tablet {
+    display: none;
+  }
+}

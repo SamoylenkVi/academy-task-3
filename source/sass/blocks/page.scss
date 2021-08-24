@@ -1,7 +1,10 @@
 .page {
-  @include font-options($family-poppins, $base-font-size, $base-line-height, $regular-font-weight, $base-color);
+  @include font-options($family-poppins, $base-font-size, $base-line-height, $medium-font-weight, $base-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+}
+
+.page h2 {
+  @include font-options($family-cormorant, $title-font-size, $title-line-height, $bold-font-weight, $base-color);
 }

@@ -20,32 +20,53 @@
   <div class="page">
     <header class="header">
       <div class="header__wrapper wrapper">
-        <div class="header__user-navigation">
+        <button class="header__toggle" aria-label="Открыть главное меню" type="button">
+          <span class="header__icon"></span>
+        </button>
+        <svg width="66" height="66" viewBox="0 0 66 66">
+          <use xlink:href="img/sprite_auto.svg#logo"></use>
+        </svg>
+        <div class="header__cart">
+          <a>
+            <svg width="20" height="18" viewBox="0 0 20 18">
+              <use xlink:href="img/sprite_auto.svg#cart"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="header__content">
           <div class="header__search">
             <label for="site-search"></label>
             <input type="search" id="site-search" name="search" placeholder="Type here to search" aria-label="Search through site content">
           </div>
-          <svg width="66" height="66" viewBox="0 0 66 66">
-            <use xlink:href="img/sprite_auto.svg#logo"></use>
-          </svg>
-          <ul>
-            <li>
-              <a>Login</a>
-            </li>
-            <li>
-              <a>Cart</a>
-            </li>
-          </ul>
+          <nav class="header__user-navigation user-navigation">
+            <ul>
+              <li>
+                <a href="">Login</a>
+              </li>
+              <li>
+                <div class="user-navigation__сart">
+                  <a href="">Cart 0</a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <nav class="header__site-navigation navigation">
+            <ul>
+              <li><a href="">What’s new</a></li>
+              <li><a href="">Chokers</a></li>
+              <li><a href="">Necklaces</a></li>
+              <li><a href="">Rings</a></li>
+              <li><a href="">Earrings</a></li>
+            </ul>
+          </nav>
+          <nav class="header__company-navigation">
+            <ul>
+              <li><a href="">About CH</a></li>
+              <li><a href="">Stores & Hours</a></li>
+              <li><a href="">Contact Us</a></li>
+            </ul>
+          </nav>
         </div>
-        <nav class="header__site-navigation navigation">
-          <ul>
-            <li><a href="">What’s new</a></li>
-            <li><a href="">Chokers</a></li>
-            <li><a href=""></a>Necklaces</li>
-            <li><a href=""></a>Rings</li>
-            <li><a href=""></a>Earrings</li>
-          </ul>
-        </nav>
       </div>
     </header>
     <main class="content">
@@ -105,7 +126,73 @@
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__wrapper wrapper">
+        <div class="footer__content">
+          <h2>The good stuff in your inbox</h2>
+          <p>News and updates from CH. No spam, we promise.</p>
+          <div class="footer__login">
+            <label for="e-mail"></label>
+            <input type="e-mail" id="e-mail" name="e-mail" placeholder="Your E-mail" aria-label="Введите ваш email" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$">
+            <button>Sign Up</button>
+          </div>
+        </div>
+        <div class="footer__navigation">
+          <div class="footer__container">
+            <ul>
+              <li><a href="#">Ordering & Payment</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Returns & Exchanges</a></li>
+              <li><a href="#">Delivery</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">About CH</a></li>
+              <li><a href="#">Stores & Hours</a></li>
+              <li><a href="#">Jobs</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer__social">
+            <ul>
+              <li>
+                <a href="">
+                  <svg width="12" height="21" viewBox="0 0 12 21">
+                    <use xlink:href="img/sprite_auto.svg#facebook"></use>
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg width="20" height="21" viewBox="0 0 20 21">
+                    <use xlink:href="img/sprite_auto.svg#instagram"></use>
+                  </svg>
+                  <span>Instagram</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg width="20" height="21" viewBox="0 0 20 21">
+                    <use xlink:href="img/sprite_auto.svg#pinterest"></use>
+                  </svg>
+                  <span>Pinterest</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg width="20" height="21" viewBox="0 0 20 21">
+                    <use xlink:href="img/sprite_auto.svg#twitter"></use>
+                  </svg>
+                  <span>Twitter</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

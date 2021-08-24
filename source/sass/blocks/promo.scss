@@ -1,0 +1,76 @@
+.promo {
+  background-color: $banner-brown;
+  background-image: url("../img/promo@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/promo@2x.jpg");
+  }
+
+  @include tablet {
+    background-image: url("../img/promo-tablet@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/promo-tablet@2x.jpg");
+    }
+  }
+
+  @include mobile {
+    background-image: url("../img/promo-mob@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/promo-mob@2x.jpg");
+    }
+  }
+}
+
+.promo__wrapper {
+  min-height: 463px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo__wrapper h2 {
+  font-size: $extra-font-size;
+  line-height: $extra-line-height;
+  color: $white;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 1.3px;
+  padding-left: 1px;
+  padding-top: 5px;
+
+  @include tablet {
+    padding-right: 19px;
+    padding-top: 10px;
+  }
+
+  @include mobile {
+    font-size: $banner-font-size;
+    line-height: $banner-line-height;
+    padding-right: 1px;
+    padding-top: 8px;
+  }
+}
+
+.promo__wrapper p {
+  @include font-options($family-cormorant, $banner-font-size, $banner-line-height, $regular-font-weight, $white);
+  font-style: italic;
+  margin: 0;
+  padding-bottom: 4px;
+
+  @include tablet {
+    padding-right: 19px;
+    padding-bottom: 10px;
+  }
+
+  @include mobile {
+    font-size: $title-font-size;
+    line-height: $special-line-height;
+    padding-right: 1px;
+    padding-bottom: 8px;
+  }
+}
