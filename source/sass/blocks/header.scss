@@ -1,16 +1,15 @@
 .header__wrapper {
   @include tablet {
-    background-color: $checked-brown;
+    min-height: 126px;
   }
-}
-
-.header__wrapper--close {
-  min-height: 126px;
-  background-color: $white;
 
   @include mobile {
     min-height: 92px;
   }
+}
+
+.header__wrapper--close {
+  background-color: $white;
 }
 
 .header__content {
@@ -29,6 +28,7 @@
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 1;
   }
 
   @include mobile {
@@ -45,7 +45,7 @@
 .header__content--open {
   @include tablet {
     overflow-y: auto;
-    transform: translateX(0%);
+    transform: translateX(0);
     transition-duration: 100ms;
     top: 0;
     left: 0;
@@ -129,21 +129,21 @@
 .header__toggle {
   display: none;
   border: none;
+  background-color: transparent;
+  z-index: 2;
+  cursor: pointer;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+
+  &:active {
+    opacity: 20%;
+  }
 
   @include tablet {
     display: block;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: inherit;
     top: 37px;
     left: 32px;
-    z-index: 2;
-    cursor: pointer;
-
-    &:active {
-      opacity: 20%;
-    }
   }
 
   @include mobile {

@@ -1,0 +1,49 @@
+.catalog-promo {
+  background-image: url("../img/catalog-promo@1x.jpg");
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/catalog-promo@2x.jpg");
+  }
+
+  @include tablet {
+    background-image: url("../img/catalog-promo-tablet@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/catalog-promo-tablet@2x.jpg");
+    }
+  }
+
+  @include mobile {
+    background-image: url("../img/catalog-promo-mob@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/catalog-promo-mob@2x.jpg");
+    }
+  }
+}
+
+.catalog-promo__wrapper {
+  min-height: 261px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.catalog-promo__wrapper h2 {
+  margin: 0;
+  text-transform: uppercase;
+  color: $white;
+  padding-bottom: 3px;
+}
+
+.catalog-promo__wrapper p {
+  @include font-options($family-cormorant, $catalog-font-size, $catalog-line-height, $medium-font-weight, $white);
+  font-style: italic;
+  margin: 0;
+
+  @include mobile {
+    text-align: center;
+  }
+}

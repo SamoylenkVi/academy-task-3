@@ -1,0 +1,122 @@
+.news {
+  background-color: $login-brown;
+  min-height: 300px;
+  display: flex;
+  justify-content: flex-end;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+
+  &:nth-of-type(2n) {
+    justify-content: flex-start;
+    background-position: right;
+  }
+
+  &--care {
+    background-image: url("../img/care@1x.jpg");
+  }
+
+  &--crystal {
+    background-image: url("../img/crystals@1x.jpg");
+  }
+
+  @include tablet {
+    margin-bottom: 50px;
+
+    &--care {
+      background-image: url("../img/care-tablet@1x.jpg");
+    }
+
+    &--crystal {
+      background-image: url("../img/crystals-tablet@1x.jpg");
+    }
+
+    &--trends {
+      background-image: url("../img/trends-tablet@1x.jpg");
+    }
+  }
+
+  @include mobile {
+    background-position: top;
+    min-height: 512px;
+    flex-direction: column;
+    background-size: contain;
+
+    &:nth-of-type(2n) {
+      justify-content: flex-end;
+      background-position: top;
+    }
+
+    &--care {
+      background-image: url("../img/care-mob@1x.jpg");
+    }
+
+    &--crystal {
+      background-image: url("../img/crystals-mob@1x.jpg");
+    }
+
+    &--trends {
+      background-image: url("../img/trends-mob@1x.jpg");
+    }
+  }
+}
+
+.news--trends {
+  background-image: url("../img/trends@1x.jpg");
+  background-size: cover;
+  grid-column-start: 2;
+  grid-row: 1 / span 2;
+  align-items: flex-end;
+
+  @include mobile {
+    align-items: stretch;
+  }
+}
+
+.news__wrapper {
+  background-color: $login-brown;
+  min-height: 300px;
+  min-width: 285px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 11px;
+
+  &--trends {
+    padding-bottom: 47px;
+  }
+
+  @include tablet {
+    min-width: 50%;
+
+    &--trends {
+      padding-bottom: 11px;
+    }
+  }
+
+  @include mobile {
+    min-height: 256px;
+  }
+}
+
+.news__wrapper p {
+  font-size: $link-font-size;
+  line-height: $price-line-height;
+  color: $input-grey;
+  padding-bottom: 12px;
+}
+
+.news__wrapper h3 {
+  @include font-options($family-cormorant, $subtitle-font-size, $subtitle-line-height, $semibold-font-weight, $black);
+  margin: 0;
+  text-align: center;
+  padding-bottom: 39px;
+}
+
+.news__wrapper a {
+  @include link-default-remove;
+  border-bottom: 1px solid $checked-brown;
+  padding-bottom: 6px;
+}

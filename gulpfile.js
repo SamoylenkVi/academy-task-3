@@ -45,6 +45,7 @@ gulp.task('server', function () {
     server: 'build/',
     notify: false,
     open: true,
+    online: true,
     cors: true,
     ui: false
   });

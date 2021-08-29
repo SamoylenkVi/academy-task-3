@@ -1,0 +1,139 @@
+.range {
+  padding-top: 19px;
+}
+
+.range__controls {
+  cursor: pointer;
+  position: relative;
+  height: 20px;
+  padding-bottom: 32px;
+
+  @include tablet {
+    padding-bottom: 51px;
+  }
+
+  @include mobile {
+    padding-bottom: 51px;
+  }
+}
+
+.range__scale {
+  height: 1px;
+  width: 100%;
+  background-color: $login-brown;
+}
+
+.range__bar {
+  position: absolute;
+  top: 0;
+  left: 27%;
+  width: 50%;
+  height: 1px;
+  background-color: $checked-brown;
+
+  @include tablet {
+    left: 21%;
+    width: 56%;
+  }
+
+  @include mobile {
+    left: 19%;
+    width: 52%;
+  }
+}
+
+.range__toggle {
+  transition-duration: 200ms;
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  background-color: $checked-brown;
+  border: 8px solid $checked-brown;
+  border-radius: 50%;
+  outline: none;
+
+  @include tablet {
+    border: 9px solid $checked-brown;
+  }
+}
+
+.range__toggle:hover,
+.range__toggle:focus {
+  transform: scale(1.2);
+}
+
+.range__toggle--min {
+  left: 22%;
+
+  @include tablet {
+    left: 18%;
+  }
+
+  @include mobile {
+    left: 16%;
+  }
+}
+
+.range__toggle--max {
+  left: 75%;
+
+  @include tablet {
+    left: 73%;
+  }
+
+  @include mobile {
+    left: 71%;
+  }
+}
+
+.range__controls input,
+.range__controls input::placeholder {
+  font-weight: $medium-font-weight;
+  font-size: $link-font-size;
+  line-height: $price-line-height;
+  color: $base-color;
+
+  @include tablet {
+    font-size: $base-font-size;
+    line-height: $link-line-height;
+  }
+}
+
+.range__controls input {
+  position: absolute;
+  top: 39%;
+  width: 30%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  @include tablet {
+    top: 31%;
+  }
+
+  &:first-of-type {
+    left: 18%;
+
+    @include tablet {
+      left: 14%;
+    }
+
+    @include mobile {
+      left: 12%;
+    }
+  }
+
+  &:last-of-type {
+    right: 1%;
+
+    @include mobile {
+      right: 4%;
+    }
+  }
+
+  @include mobile {
+    top: 31%;
+  }
+}

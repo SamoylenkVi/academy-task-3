@@ -74,6 +74,7 @@
   justify-content: flex-start;
   border-bottom: 1px solid $white;
   padding-bottom: 5px;
+  width: 100%;
 }
 
 .footer__login input {
@@ -123,6 +124,16 @@
   &:focus {
     &::before {
       transform: translate3d(8%, 0, 0);
+    }
+  }
+
+  @include mobile {
+    padding-right: 35px;
+    padding-left: 0;
+
+    &::before {
+      top: 19%;
+      right: 0;
     }
   }
 }

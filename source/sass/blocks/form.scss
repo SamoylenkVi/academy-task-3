@@ -1,0 +1,274 @@
+.form {
+  @include tablet {
+    width: 439px;
+    flex-direction: column;
+    transition-duration: 300ms;
+    position: absolute;
+    background-color: $white;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    padding: 0;
+    padding-top: 27px;
+    padding-right: 18px;
+    background-clip: content-box;
+  }
+
+  @include mobile {
+    background-clip: border-box;
+    width: 100%;
+    padding: 76px 25px 0;
+  }
+}
+
+.form--close {
+  @include tablet {
+    transform: translateX(-100%);
+  }
+}
+
+.form--open {
+  @include tablet {
+    overflow-y: auto;
+    transform: translateX(0%);
+    transition-duration: 100ms;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 4;
+  }
+}
+
+form {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.form__toggle-menu {
+  display: none;
+
+  @include tablet {
+    display: block;
+    position: absolute;
+    width: 32px;
+    min-height: 32px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: $black;
+    top: 11px;
+    right: 0;
+    z-index: 3;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 17px;
+      height: 2px;
+      background-color: $white;
+      top: 45%;
+      left: 21%;
+      z-index: 4;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  @include mobile {
+    top: 60px;
+    right: 15px;
+  }
+}
+
+.form__filter {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $checked-brown;
+  padding: 24px 25px 17px 25px;
+  margin-top: -1px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-image: url("../img/open-filter.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    top: 20px;
+    right: 19px;
+  }
+
+  @include tablet {
+    border: none;
+    border-bottom: 1px solid $checked-brown;
+    padding: 36px 87px 20px 21px;
+    margin-top: 0;
+
+    &::before {
+      background-size: 100%;
+      top: 34px;
+      right: 39px;
+    }
+  }
+
+  @include mobile {
+    padding: 24px 10px 10px;
+
+    &::before {
+      background-size: 86%;
+      top: 24px;
+      right: 18px;
+    }
+  }
+}
+
+.form__filter--close {
+  ul {
+    display: none;
+  }
+
+  &::before {
+    background-image: url("../img/close-filter.svg");
+  }
+
+  div {
+    display: none;
+  }
+}
+
+.form__filter h3 {
+  font-weight: $medium-font-weight;
+  font-size: $base-font-size;
+  margin: 0;
+  padding-bottom: 6px;
+  cursor: pointer;
+
+  @include tablet {
+    font-size: $questions-font-size;
+    line-height: $questions-line-height;
+    padding-bottom: 12px;
+  }
+
+  @include mobile {
+    padding: 0 31px 14px 11px;
+  }
+}
+
+.form__filter ul {
+  @include list-default-remove;
+  padding-top: 16px;
+
+  @include tablet {
+    padding-top: 10px;
+  }
+}
+
+.form__filter li {
+  padding-left: 35px;
+  padding-bottom: 10px;
+
+  @include tablet {
+    padding-left: 39px;
+    padding-bottom: 17px;
+  }
+
+  @include mobile {
+    padding-left: 50px;
+  }
+}
+
+.form__filter-checkbox label {
+  font-size: $link-font-size;
+  line-height: $price-line-height;
+  position: relative;
+  cursor: pointer;
+
+  @include tablet {
+    font-size: $base-font-size;
+    line-height: $link-line-height;
+  }
+}
+
+.form__filter-checkbox input + label::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid $checked-brown;
+  top: 2px;
+  left: -26px;
+  z-index: 2;
+
+  @include tablet {
+    width: 18px;
+    height: 18px;
+    top: 2px;
+    left: -29px;
+  }
+}
+
+.form__filter-checkbox input:checked + label::before {
+  background-color: $checked-brown;
+}
+
+.form__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 68px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 34px;
+
+  &--apply {
+    background-color: $checked-brown;
+    color: $white;
+  }
+
+  &--reset {
+    border: 1px solid $checked-brown;
+    background-color: transparent;
+    margin-top: 26px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $input;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
+  @include tablet {
+    margin: 41px 39px 5px 22px;
+
+    &--reset {
+      margin-top: 19px;
+    }
+  }
+
+  @include mobile {
+    margin: 30px 19px 5px 22px;
+
+    &--reset {
+      margin-top: 16px;
+    }
+  }
+}

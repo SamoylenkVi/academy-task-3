@@ -1,0 +1,58 @@
+.card a {
+  @include link-default-remove;
+  display: block;
+  margin-bottom: 16px;
+  transition-duration: 300ms;
+
+  &:hover,
+  &:focus {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  @include mobile {
+    margin-bottom: 10px;
+  }
+}
+
+.card img {
+  width: 100%;
+}
+
+.card--catalog img {
+  height: 272px;
+  object-fit: cover;
+
+  @include tablet {
+    height: 208px;
+  }
+
+  @include mobile {
+    height: 136px;
+  }
+}
+
+.card__description p {
+  margin: 0;
+
+  text-align: center;
+
+  &:first-child {
+    margin-bottom: 6px;
+    font-weight: $medium-font-weight;
+    line-height: $link-line-height;
+
+    @include tablet {
+      margin-bottom: 5px;
+    }
+
+    @include mobile {
+      margin-bottom: 6px;
+    }
+  }
+
+  &:last-child {
+    font-size: $link-font-size;
+    font-weight: $bold-font-weight;
+    line-height: $price-line-height;
+  }
+}

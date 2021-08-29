@@ -1,0 +1,27 @@
+.blog__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog__wrapper h2 {
+  margin: 0;
+}
+
+.blog__wrapper p {
+  margin: 0;
+}
+
+.blog__content-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 30px;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}

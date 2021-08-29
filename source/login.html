@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jewellery</title>
+  <link rel="stylesheet" href="./css/vendor/normalize.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorantGaramond-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorantGaramond-semiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorantGaramond-italic.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="header__wrapper wrapper">
+        <button class="header__toggle" aria-label="Открыть главное меню" type="button">
+          <span class="header__icon"></span>
+        </button>
+        <a href="main.html">
+          <svg width="66" height="66" viewBox="0 0 66 66">
+            <use xlink:href="img/sprite_auto.svg#logo"></use>
+          </svg>
+        </a>
+        <div class="header__cart">
+          <a>
+            <svg width="20" height="18" viewBox="0 0 20 18">
+              <use xlink:href="img/sprite_auto.svg#cart"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="header__content">
+          <div class="header__search">
+            <label for="site-search"></label>
+            <input type="search" id="site-search" name="search" placeholder="Type here to search" aria-label="Search through site content">
+          </div>
+          <nav class="header__user-navigation user-navigation">
+            <ul>
+              <li>
+                <a href="main.html">Home page</a>
+              </li>
+              <li>
+                <div class="user-navigation__сart">
+                  <a href="">Cart 0</a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <nav class="header__site-navigation navigation">
+            <ul>
+              <li><a href="">What’s new</a></li>
+              <li><a href="">Chokers</a></li>
+              <li><a href="">Necklaces</a></li>
+              <li><a href="">Rings</a></li>
+              <li><a href="">Earrings</a></li>
+            </ul>
+          </nav>
+          <nav class="header__company-navigation">
+            <ul>
+              <li><a href="">About CH</a></li>
+              <li><a href="">Stores & Hours</a></li>
+              <li><a href="">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="content">
+      <section class="login">
+        <div class="login__wrapper wrapper">
+          <h2>Log In</h2>
+          <form action="https://echo.htmlacademy.ru/" method="get" class="login__form">
+            <label for="e-mail"></label>
+            <input type="e-mail" id="e-mail" name="e-mail" placeholder="Your E-mail" aria-label="Введите ваш email" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$" required>
+            <label for="password"></label>
+            <input name="password" id="password" type="password" placeholder="Password" required>
+            <a href="#">Forgot your password?</a>
+            <button type="submit">Log In</button>
+          </form>
+          <div class="login__account">
+            <p>Don’t have an account?</p>
+            <a href="#">Sign up</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper wrapper">
+        <div class="footer__content">
+          <h2>The good stuff in your inbox</h2>
+          <p>News and updates from CH. No spam, we promise.</p>
+          <form action="https://echo.htmlacademy.ru/" method="get" class="footer__login">
+            <label for="footer-mail"></label>
+            <input type="e-mail" id="footer-mail" name="e-mail" placeholder="Your E-mail" aria-label="Введите ваш email" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$">
+            <button>Sign Up</button>
+          </form>
+        </div>
+        <div class="footer__navigation">
+          <div class="footer__container">
+            <ul>
+              <li><a href="#">Ordering & Payment</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Returns & Exchanges</a></li>
+              <li><a href="#">Delivery</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">About CH</a></li>
+              <li><a href="#">Stores & Hours</a></li>
+              <li><a href="#">Jobs</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer__social">
+            <ul>
+              <li>
+                <a href="">
+                  <svg width="12" height="21" viewBox="0 0 12 21">
+                    <use xlink:href="img/sprite_auto.svg#facebook"></use>
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg width="20" height="21" viewBox="0 0 20 21">
+                    <use xlink:href="img/sprite_auto.svg#instagram"></use>
+                  </svg>
+                  <span>Instagram</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg width="20" height="21" viewBox="0 0 20 21">
+                    <use xlink:href="img/sprite_auto.svg#pinterest"></use>
+                  </svg>
+                  <span>Pinterest</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg width="20" height="21" viewBox="0 0 20 21">
+                    <use xlink:href="img/sprite_auto.svg#twitter"></use>
+                  </svg>
+                  <span>Twitter</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
