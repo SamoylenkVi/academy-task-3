@@ -30,6 +30,15 @@
   line-height: $link-line-height;
   border-bottom: 1px solid $checked-brown;
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @include mobile {
     margin-bottom: 49px;
   }

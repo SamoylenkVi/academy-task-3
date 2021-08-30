@@ -1,6 +1,14 @@
 .user-navigation {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 20px;
+
   @include tablet {
     order: 3;
+    padding: 0;
+    width: 100%;
+    justify-content: flex-start;
   }
 }
 
@@ -15,6 +23,7 @@
   @include tablet {
     flex-direction: column;
     justify-content: flex-start;
+    width: 100%;
   }
 
   @include mobile {

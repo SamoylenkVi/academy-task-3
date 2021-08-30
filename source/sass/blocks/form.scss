@@ -101,49 +101,21 @@ form {
   margin-top: -1px;
   position: relative;
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 25px;
-    height: 25px;
-    background-image: url("../img/open-filter.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    top: 20px;
-    right: 19px;
-  }
-
   @include tablet {
     border: none;
     border-bottom: 1px solid $checked-brown;
     padding: 36px 87px 20px 21px;
     margin-top: 0;
-
-    &::before {
-      background-size: 100%;
-      top: 34px;
-      right: 39px;
-    }
   }
 
   @include mobile {
     padding: 24px 10px 10px;
-
-    &::before {
-      background-size: 86%;
-      top: 24px;
-      right: 18px;
-    }
   }
 }
 
 .form__filter--close {
   ul {
     display: none;
-  }
-
-  &::before {
-    background-image: url("../img/close-filter.svg");
   }
 
   div {
@@ -158,14 +130,44 @@ form {
   padding-bottom: 6px;
   cursor: pointer;
 
+  &::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-image: url("../img/open-filter.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    top: 20px;
+    right: 19px;
+  }
+
   @include tablet {
     font-size: $questions-font-size;
     line-height: $questions-line-height;
     padding-bottom: 12px;
+
+    &::before {
+      background-size: 100%;
+      top: 33px;
+      right: 37px;
+    }
   }
 
   @include mobile {
     padding: 0 31px 14px 11px;
+
+    &::before {
+      background-size: 86%;
+      top: 24px;
+      right: 18px;
+    }
+  }
+}
+
+.form__filter--close h3 {
+  &::before {
+    background-image: url("../img/close-filter.svg");
   }
 }
 
@@ -250,6 +252,7 @@ form {
   &:hover,
   &:focus {
     background-color: $input;
+    color: $white;
   }
 
   &:active {

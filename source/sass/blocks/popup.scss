@@ -60,6 +60,15 @@
   background-color: transparent;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    outline: 1px solid $base-color;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
   &::before,
   &::after {
     position: absolute;
@@ -135,6 +144,7 @@
 
 .popup__form input {
   margin-bottom: 33px;
+  cursor: pointer;
 
   @include mobile {
     padding-left: 0;
@@ -152,6 +162,10 @@
   @include mobile {
     padding-bottom: 35px;
   }
+}
+
+.popup button {
+  @include font-options($family-poppins, $base-font-size, $base-line-height, $medium-font-weight, $white);
 }
 
 .popup__account {

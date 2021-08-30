@@ -59,6 +59,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-basis: 50%;
+  padding-right: 40px;
+
+  @include tablet {
+    padding: 0;
+  }
 }
 
 .header__search input,
@@ -70,6 +76,7 @@
 }
 
 .header__search input {
+  width: 100%;
   padding-left: 28px;
   position: relative;
   background-image: url("../img/search.svg");
@@ -85,7 +92,6 @@
   }
 
   @include tablet {
-    width: 100%;
     border: 1px solid transparent;
     background-color: $input;
     border-radius: 19px;

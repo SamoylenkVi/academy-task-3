@@ -55,6 +55,11 @@
   padding-bottom: 9px;
   margin-bottom: 40px;
 
+  &:hover,
+  &:focus {
+    border-color: $border-brown;
+  }
+
   &:last-of-type {
     margin-bottom: 5px;
   }
@@ -72,6 +77,15 @@
   color: $white;
   line-height: $base-line-height;
   font-weight: $medium-font-weight;
+
+  &:hover,
+  &:focus {
+    background-color: $input;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 }
 
 .login__form a {
@@ -82,6 +96,15 @@
   font-size: $link-font-size;
   line-height: $link-line-height;
   font-weight: $medium-font-weight;
+
+  &:hover,
+  &:focus {
+    color: $base-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @include tablet {
     font-size: $small-font-size;
@@ -109,6 +132,15 @@
 
 .login__account a {
   font-weight: $medium-font-weight;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @include tablet {
     font-size: $link-font-size;
