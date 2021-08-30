@@ -41,6 +41,7 @@
     min-height: 512px;
     flex-direction: column;
     background-size: contain;
+    margin-bottom: 39px;
 
     &:nth-of-type(2n) {
       justify-content: flex-end;
@@ -76,12 +77,12 @@
 .news__wrapper {
   background-color: $login-brown;
   min-height: 300px;
-  min-width: 285px;
+  width: 285px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 10px;
+  padding-top: 7px;
   padding-bottom: 11px;
 
   &--trends {
@@ -97,11 +98,14 @@
   }
 
   @include mobile {
+    width: 100%;
     min-height: 256px;
+    padding: 15px;
   }
 }
 
 .news__wrapper p {
+  margin: 0;
   font-size: $link-font-size;
   line-height: $price-line-height;
   color: $input-grey;
@@ -118,5 +122,6 @@
 .news__wrapper a {
   @include link-default-remove;
   border-bottom: 1px solid $checked-brown;
-  padding-bottom: 6px;
+  padding-bottom: 4px;
+  margin: 0;
 }

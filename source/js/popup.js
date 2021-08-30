@@ -19,7 +19,7 @@ const setPopup = () => {
   const popupOpen = document.querySelector('a[href="login.html"]');
   const popupUnderlay = popup.querySelector('.popup__underlay');
   const popupButtonClose = popup.querySelector('.popup__close');
-  const inputMail = popup.querySelector('input[name="e-mail"]');
+  const inputMail = form.querySelector('input[name="e-mail"]');
   const inputPassword = popup.querySelector('input[name="password"]');
 
   const focusTrap = window.focusTrap;

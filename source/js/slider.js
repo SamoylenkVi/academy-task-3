@@ -211,7 +211,7 @@
 
     const toggleSwipe = (width) => {
       if (width < DESKTOP_WIDTH) {
-        sliderWrapper.addEventListener('touchstart', touchStartHandler);
+        sliderWrapper.addEventListener('touchstart', touchStartHandler, {passive: true});
       } else {
         sliderWrapper.removeEventListener('touchstart', touchStartHandler);
       }

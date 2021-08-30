@@ -13,24 +13,24 @@
   @include mobile {
     padding: 60px 15px 15px;
   }
+}
 
-  & > a {
-    @include link-default-remove;
-    align-self: center;
-    margin-bottom: 60px;
-    font-weight: $medium-font-weight;
-    line-height: $link-line-height;
-    border-bottom: 1px solid $checked-brown;
-    transition-duration: 150ms;
+.slider__wrapper > a {
+  @include link-default-remove;
+  align-self: center;
+  margin-bottom: 60px;
+  font-weight: $medium-font-weight;
+  line-height: $link-line-height;
+  border-bottom: 1px solid $checked-brown;
+  transition-duration: 150ms;
 
-    &:hover,
-    &:focus {
-      opacity: 0.6;
-    }
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 
-    &:active {
-      opacity: 0.3;
-    }
+  &:active {
+    opacity: 0.3;
   }
 
   @include tablet {

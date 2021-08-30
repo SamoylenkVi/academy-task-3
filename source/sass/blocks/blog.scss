@@ -2,14 +2,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 48px;
+  padding-bottom: 60px;
+
+  @include tablet {
+    padding-top: 27px;
+    padding-bottom: 7px;
+  }
+
+  @include mobile {
+    padding-top: 40px;
+  }
 }
 
 .blog__wrapper h2 {
   margin: 0;
+  padding-bottom: 21px;
+  letter-spacing: 0.03em;
 }
 
-.blog__wrapper p {
-  margin: 0;
+.blog__wrapper a {
+  @include link-default-remove;
+  align-self: center;
+  padding-bottom: 3px;
+  margin-bottom: 60px;
+  font-weight: $medium-font-weight;
+  line-height: $link-line-height;
+  border-bottom: 1px solid $checked-brown;
+
+  @include mobile {
+    margin-bottom: 49px;
+  }
 }
 
 .blog__content-wrapper {

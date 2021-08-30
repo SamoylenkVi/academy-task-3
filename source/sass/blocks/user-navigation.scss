@@ -8,6 +8,7 @@
   @include list-default-remove;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   font-size: $link-font-size;
   line-height: $link-line-height;
 

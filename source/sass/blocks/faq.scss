@@ -1,0 +1,133 @@
+.faq__wrapper {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include tablet {
+    padding: 13px 45px;
+  }
+
+  @include mobile {
+    padding: 16px 15px;
+  }
+}
+
+.faq__wrapper h2 {
+  margin: 0 0 48px;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  @include mobile {
+    margin-bottom: 28px;
+  }
+}
+
+.faq__wrapper dl {
+  max-width: 970px;
+  margin: 0 auto;
+}
+
+.faq__wrapper a {
+  @include link-default-remove;
+  position: relative;
+  display: block;
+  padding-right: 30px;
+  font-size: $questions-font-size;
+  font-weight: $medium-font-weight;
+  line-height: $questions-line-height;
+  transition-duration: 300ms;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 7px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid $checked-brown;
+    border-top: none;
+    border-right: none;
+    transform: translateY(-90%) rotate(-45deg);
+    transition-duration: 300ms;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @include tablet {
+    &::before {
+      right: 2px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @include mobile {
+    font-size: $base-font-size;
+
+    &::before {
+      width: 15px;
+      height: 15px;
+      transform: translateY(-160%) rotate(-45deg);
+    }
+  }
+}
+
+.faq__wrapper dd {
+  display: none;
+  max-width: 527px;
+  margin: 7px 7px 0;
+  line-height: $link-line-height;
+
+  @include tablet {
+    max-width: 535px;
+    margin: 27px 0 1px;
+  }
+
+  @include mobile {
+    margin: 13px 29px 4px 0;
+    font-size: $link-font-size;
+    line-height: $base-line-height;
+  }
+}
+
+.faq__item {
+  padding: 43px;
+  border: 1px solid $checked-brown;
+
+  &:not(:first-child) {
+    margin-top: -1px;
+  }
+
+  @include tablet {
+    padding: 43px 49px;
+  }
+
+  @include mobile {
+    min-height: 83px;
+    padding: 18px 24px 15px;
+  }
+}
+
+.faq__item--open {
+  @include mobile {
+    padding-top: 15px;
+  }
+}
+
+.faq__item--open dd {
+  display: block;
+}
+
+.faq__item--open a::before {
+  transform: translateY(-20%) rotate(-45deg) scale(-1);
+
+  @include mobile {
+    transform: translateY(-75%) rotate(-45deg) scale(-1);
+  }
+}

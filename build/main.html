@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jewellery">
   <title>Jewellery</title>
-  <link rel="stylesheet" href="./css/vendor/normalize.min.css">
+  <link link="" rel="preload" as="style" href="./css/vendor/normalize.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
   <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin="">
@@ -20,7 +21,7 @@
   <div class="page">
     <header class="header">
       <div class="header__wrapper wrapper">
-        <button class="header__toggle" aria-label="Открыть главное меню" type="button">
+        <button class="header__toggle" aria-label="Open main menu" type="button">
           <span class="header__icon"></span>
         </button>
         <svg width="66" height="66" viewBox="0 0 66 66">
@@ -45,25 +46,25 @@
               </li>
               <li>
                 <div class="user-navigation__сart">
-                  <a href="">Cart 0</a>
+                  <a href="#">Cart 0</a>
                 </div>
               </li>
             </ul>
           </nav>
           <nav class="header__site-navigation navigation">
             <ul>
-              <li><a href="">What’s new</a></li>
-              <li><a href="">Chokers</a></li>
-              <li><a href="">Necklaces</a></li>
-              <li><a href="">Rings</a></li>
-              <li><a href="">Earrings</a></li>
+              <li><a href="#">What’s new</a></li>
+              <li><a href="#">Chokers</a></li>
+              <li><a href="#">Necklaces</a></li>
+              <li><a href="#">Rings</a></li>
+              <li><a href="#">Earrings</a></li>
             </ul>
           </nav>
           <nav class="header__company-navigation">
             <ul>
-              <li><a href="">About CH</a></li>
-              <li><a href="">Stores & Hours</a></li>
-              <li><a href="">Contact Us</a></li>
+              <li><a href="#">About CH</a></li>
+              <li><a href="#">Stores & Hours</a></li>
+              <li><a href="#">Contact Us</a></li>
             </ul>
           </nav>
         </div>
@@ -284,7 +285,7 @@
       <section class="blog">
         <div class="blog__wrapper wrapper">
           <h2>Blog</h2>
-          <p>Read All</p>
+          <a href="#">Read All</a>
           <div class="blog__content-wrapper">
             <article class="blog__news news news--care">
               <div class="news__wrapper">
@@ -307,27 +308,84 @@
                 <a href="#">Read Article</a>
               </div>
             </article>
-            <article class="blog__news news news--care">
-              <div class="news__wrapper">
-                <p>September 30, 2019</p>
-                <h3>How to care for <br> your jewellery</h3>
-                <a href="#">Read Article</a>
-              </div>
-            </article>
-            <article class="blog__news news news--care">
-              <div class="news__wrapper">
-                <p>September 30, 2019</p>
-                <h3>How to care for <br> your jewellery</h3>
-                <a href="#">Read Article</a>
-              </div>
-            </article>
-            <article class="blog__news news news--care">
-              <div class="news__wrapper">
-                <p>September 30, 2019</p>
-                <h3>How to care for <br> your jewellery</h3>
-                <a href="#">Read Article</a>
-              </div>
-            </article>
+          </div>
+        </div>
+      </section>
+      <section class="faq">
+        <div class="faq__wrapper wrapper">
+          <h2>Frequently asked questions</h2>
+          <dl>
+            <div class="faq__item faq__item--open">
+              <dt><a href="#">What materials are the&nbsp;jewellery made of?</a></dt>
+              <dd>
+                Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+                semiprecious stones and crystals.
+              </dd>
+            </div>
+            <div class="faq__item faq__item--open">
+              <dt><a href="#">Which countries do&nbsp;you&nbsp;deliver to?</a></dt>
+              <dd>
+                Our jewellerry is made of solid gold, silver or leather.Also, some jewellery contains precious and
+                semiprecious stones and crystals.
+              </dd>
+            </div>
+            <div class="faq__item faq__item--open">
+              <dt><a href="#">What are the payment&nbsp;methods?</a></dt>
+              <dd>
+                Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+                semiprecious stones and crystals.
+              </dd>
+            </div>
+            <div class="faq__item faq__item--open">
+              <dt><a href="#">Can I return the jewellery&nbsp;if it didn’t fit me?</a></dt>
+              <dd>
+                Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and
+                semiprecious stones and crystals.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+      <section class="pictures">
+        <div class="pictures__wrapper wrapper">
+          <h2><span>@</span>Chjewellery</h2>
+          <a href="#">Follow Us</a>
+          <div class="pictures__content">
+            <!-- 1х: 230px; 2x: 460px -->
+            <picture>
+              <source type="image/webp" srcset="img/inst-1@1x.webp 1x, img/inst-1@2x.webp 2x">
+              <img src="img/inst-1@1x.jpg" srcset="img/inst-1@2x.jpg" width="230" height="230" alt="Marble earrings" loading="lazy">
+            </picture>
+            <!-- 1х: 399px; 2x: 798px -->
+            <picture>
+              <source type="image/webp" srcset="img/inst-3@1x.webp 1x, img/inst-3@2x.webp 2x">
+              <img src="img/inst-3@1x.jpg" srcset="img/inst-3@2x.jpg" width="399" height="412" alt="Marble earrings" loading="lazy">
+            </picture>
+            <!-- 1х: 230px; 2x: 460px -->
+            <picture>
+              <source type="image/webp" srcset="img/inst-4@1x.webp 1x, img/inst-4@2x.webp 2x">
+              <img src="img/inst-4@1x.jpg" srcset="img/inst-4@2x.jpg" width="230" height="230" alt="Marble earrings" loading="lazy">
+            </picture>
+            <!-- 1х: 230px; 2x: 460px -->
+            <picture>
+              <source type="image/webp" srcset="img/inst-6@1x.webp 1x, img/inst-6@2x.webp 2x">
+              <img src="img/inst-6@1x.jpg" srcset="img/inst-6@2x.jpg" width="230" height="230" alt="Marble earrings" loading="lazy">
+            </picture>
+            <!-- 1х: 230px; 2x: 460px -->
+            <picture>
+              <source type="image/webp" srcset="img/inst-2@1x.webp 1x, img/inst-2@2x.webp 2x">
+              <img src="img/inst-2@1x.jpg" srcset="img/inst-2@2x.jpg" width="230" height="150" alt="Marble earrings" loading="lazy">
+            </picture>
+            <!-- 1х: 230px; 2x: 460px -->
+            <picture>
+              <source type="image/webp" srcset="img/inst-5@1x.webp 1x, img/inst-5@2x.webp 2x">
+              <img src="img/inst-5@1x.jpg" srcset="img/inst-5@2x.jpg" width="230" height="150" alt="Marble earrings" loading="lazy">
+            </picture>
+            <!-- 1х: 230px; 2x: 460px -->
+            <picture>
+              <source type="image/webp" srcset="img/inst-7@1x.webp 1x, img/inst-7@2x.webp 2x">
+              <img src="img/inst-7@1x.jpg" srcset="img/inst-7@2x.jpg" width="230" height="150" alt="Marble earrings" loading="lazy">
+            </picture>
           </div>
         </div>
       </section>
@@ -339,8 +397,8 @@
           <p>News and updates from CH. No spam, we promise.</p>
           <form action="https://echo.htmlacademy.ru/" method="get" class="footer__login">
             <label for="footer-mail"></label>
-            <input type="e-mail" id="footer-mail" name="e-mail" placeholder="Your E-mail" aria-label="Введите ваш email" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$">
-            <button>Sign Up</button>
+            <input type="email" id="footer-mail" name="e-mail" placeholder="Your E-mail" aria-label="Введите ваш email" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$">
+            <button type="submit" aria-label="Sign up">Sign Up</button>
           </form>
         </div>
         <div class="footer__navigation">
@@ -361,7 +419,8 @@
           <div class="footer__social">
             <ul>
               <li>
-                <a href="">
+                <a href="#">
+                  <span class="visually-hidden">Our page in facebook</span>
                   <svg width="12" height="21" viewBox="0 0 12 21">
                     <use xlink:href="img/sprite_auto.svg#facebook"></use>
                   </svg>
@@ -369,7 +428,8 @@
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="#">
+                  <span class="visually-hidden">Our page in instagram</span>
                   <svg width="20" height="21" viewBox="0 0 20 21">
                     <use xlink:href="img/sprite_auto.svg#instagram"></use>
                   </svg>
@@ -377,7 +437,8 @@
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="#">
+                  <span class="visually-hidden">Our page in pinterest</span>
                   <svg width="20" height="21" viewBox="0 0 20 21">
                     <use xlink:href="img/sprite_auto.svg#pinterest"></use>
                   </svg>
@@ -385,8 +446,9 @@
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="#">
                   <svg width="20" height="21" viewBox="0 0 20 21">
+                  <span class="visually-hidden">Our page in twitter</span>
                     <use xlink:href="img/sprite_auto.svg#twitter"></use>
                   </svg>
                   <span>Twitter</span>
@@ -401,16 +463,16 @@
   <section class="popup">
     <div class="popup__underlay"></div>
     <div class="popup__login login">
-      <button type="button" class="popup__close"></button>
+      <button type="button" class="popup__close" aria-label="close window"></button>
       <div class="login__wrapper popup__wrapper">
         <h2>Log In</h2>
         <form action="https://echo.htmlacademy.ru/" method="get" class="login__form popup__form">
           <label for="e-mail"></label>
-          <input type="e-mail" id="e-mail" name="e-mail" placeholder="Your E-mail" aria-label="Введите ваш email" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$" required="">
+          <input type="email" id="e-mail" name="e-mail" placeholder="Your E-mail" aria-label="Введите ваш email" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$" required="">
           <label for="password"></label>
           <input name="password" id="password" type="password" placeholder="Password" required="">
           <a href="#">Forgot your password?</a>
-          <button type="submit">Log In</button>
+          <button type="submit" aria-label="Sign in">Log In</button>
         </form>
         <div class="login__account popup__account">
           <p>Don’t have an account?</p>
@@ -421,7 +483,7 @@
   </section>
   <script src="https://unpkg.com/tabbable/dist/index.umd.min.js"></script>
   <script src="https://unpkg.com/focus-trap/dist/focus-trap.umd.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js" async=""></script>
 </body>
 
 </html>
