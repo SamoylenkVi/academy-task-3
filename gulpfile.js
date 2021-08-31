@@ -95,10 +95,20 @@ gulp.task('html', function () {
 });
 
 gulp.task('script', function () {
-  return gulp.src('source/js/**/*.js')
+  return gulp.src('source/js/*.js')
       .pipe(sourcemap.init())
       .pipe(concat('main.js'))
       .pipe(sourcemap.write())
+      .pipe(gulp.dest('build/js'))
+      .pipe(server.stream());
+});
+
+gulp.task('script-vendor', function () {
+  return gulp.src([
+    'node_modules/focus-trap/dist/focus-trap.esm.js',
+    'node_modules/tabbable/dist/index.esm.js'
+  ])
+      .pipe(concat('vendor.js'))
       .pipe(gulp.dest('build/js'))
       .pipe(server.stream());
 });
@@ -117,5 +127,5 @@ gulp.task('clean', function () {
   return del('build');
 });
 
-gulp.task('build', gulp.series('clean', 'copy', 'css', 'normalize', 'sprite', 'html', 'script', 'images', 'webp'));
+gulp.task('build', gulp.series('clean', 'copy', 'css', 'normalize', 'sprite', 'html', 'script-vendor', 'script', 'images', 'webp'));
 gulp.task('start', gulp.series('build', 'server'));

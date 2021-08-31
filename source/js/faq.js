@@ -8,6 +8,11 @@
     }
 
     const items = section.querySelectorAll('.faq__item');
+
+    if (items.length === 0) {
+      return;
+    }
+
     items.forEach(item => {
       item.classList.remove('faq__item--open');
       item

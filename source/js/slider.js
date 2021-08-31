@@ -27,6 +27,10 @@
     const pagination = section.querySelector('.slider__pagination');
 
     const container = section.querySelector('.slider__items ul');
+
+    const mobilePaginationTemplate = document.querySelector('#mobile-slider-counter').content.firstElementChild;
+    const desktopPaginationTemplate = document.querySelector('#desktop-slider-counter').content.firstElementChild;
+
     const slidesCount = container.childElementCount;
 
     const {transitionDuration} = getComputedStyle(container);
@@ -37,12 +41,6 @@
     let posInit;
     let posX1 = 0;
     let posX2 = 0;
-
-    const createElement = (template) => {
-      const newElement = document.createElement(`div`);
-      newElement.innerHTML = template;
-      return newElement.firstChild || ``;
-    };
 
     const throttle = (callback, wait = 300, immediate = true) => {
       let timeout = null;
@@ -80,22 +78,25 @@
 
     const renderDesktopPagination = (count, currentPage) => {
       const pagesCount = Math.ceil(count / (viewWidth >= DESKTOP_WIDTH ? SlidesPerPage.DESKTOP : SlidesPerPage.TABLET));
-      const pagesList = createElement(`<ul></ul>`);
+      const pagesList = document.createElement(`ul`);
+
       const pages = new Array(pagesCount)
           .fill()
           .map((value, index) => {
             const pageNumber = index + 1;
-            const hyperRef = currentPage !== pageNumber ? ` href="#"` : ``;
+            const element = desktopPaginationTemplate.cloneNode(true);
+            const elementLink = element.querySelector('a');
 
-            const template = `<li>
-                                <a aria-label="slider page ${pageNumber}" data-page-number="${pageNumber}"${hyperRef}>
-                                  ${index + 1}
-                                </a>
-                              </li>`;
+            elementLink.setAttribute(`aria-label`, `Slider page ${pageNumber}`);
+            elementLink.setAttribute(`data-page-number`, `${pageNumber}`);
 
-            const element = createElement(template);
+            if (currentPage !== pageNumber) {
+              elementLink.setAttribute(`href`, `#`);
+            }
 
-            element.addEventListener('click', (evt) => {
+            elementLink.textContent = pageNumber;
+
+            elementLink.addEventListener('click', (evt) => {
               evt.preventDefault();
               changeSlides(+evt.target.dataset.pageNumber);
             });
@@ -112,8 +113,11 @@
     const renderMobilePagination = (count, currentPage) => {
       const pagesCount = Math.ceil(count / SlidesPerPage.TABLET);
 
-      const template = `<p><span>${currentPage}</span>&nbsp;&nbsp;of&nbsp;&nbsp;${pagesCount}</p>`;
-      const element = createElement(template);
+      const element = mobilePaginationTemplate.cloneNode(true);
+
+      const [current, total] = Array.from(element.querySelectorAll('span'));
+      current.textContent = currentPage;
+      total.textContent = pagesCount;
 
       pagination.innerHTML = ``;
       pagination.append(element);
