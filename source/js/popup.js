@@ -1,5 +1,3 @@
-import * as focusTrap from './vendor.js'; // ESM
-
 'use strict';
 (function () {
   const keys = {
@@ -24,7 +22,7 @@ import * as focusTrap from './vendor.js'; // ESM
     const inputMail = form.querySelector('input[name="e-mail"]');
     const inputPassword = popup.querySelector('input[name="password"]');
 
-    const trap = focusTrap.createFocusTrap(popup, {initialFocus: inputMail});
+    const trap = window.focusTrap.createFocusTrap(popup, {initialFocus: inputMail});
 
     const toggleValidation = (input, isValid) => {
       if (!isValid) {

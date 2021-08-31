@@ -64,8 +64,8 @@ gulp.task('refresh', function (done) {
 gulp.task('images', function () {
   return gulp.src('source/img/**/*.{png,jpg,svg}')
       .pipe(imagemin([
-        imagemin.optipng({ optimizationLevel: 3 }),
-        imagemin.jpegtran({ progressive: true }),
+        imagemin.optipng({optimizationLevel: 3}),
+        imagemin.jpegtran({progressive: true}),
         imagemin.svgo()
       ]))
 
@@ -104,13 +104,9 @@ gulp.task('script', function () {
 });
 
 gulp.task('script-vendor', function () {
-  return gulp.src([
-    'node_modules/focus-trap/dist/focus-trap.esm.js',
-    'node_modules/tabbable/dist/index.esm.js'
-  ])
+  return gulp.src('source/js/vendor/*.js')
       .pipe(concat('vendor.js'))
-      .pipe(gulp.dest('build/js'))
-      .pipe(server.stream());
+      .pipe(gulp.dest('build/js'));
 });
 
 gulp.task('copy', function () {
