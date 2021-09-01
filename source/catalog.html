@@ -83,9 +83,9 @@
       <section class="catalog">
         <div class="catalog__wrapper wrapper">
           <button type="button" class="catalog__toggle" aria-label="Open catalog filter" data-filter-button="open">Filter</button>
-          <div class="catalog__form form form--close">
+          <div class="catalog__form form form--no-js">
             <form action="https://echo.htmlacademy.ru/" method="get">
-              <button type="button" class="form__toggle-menu" aria-label="Close catalog filter" data-filter-button="close"></button>
+              <button type="button" class="form__toggle-menu form__toggle-menu--no-js" aria-label="Close catalog filter" data-filter-button="close"></button>
               <div class="form__filter form__filter-checkbox">
                 <h3>Product</h3>
                 <ul>
@@ -358,7 +358,7 @@
           <p>News and updates from CH. No spam, we promise.</p>
           <form action="https://echo.htmlacademy.ru/" method="get" class="footer__login">
             <label for="footer-mail"></label>
-            <input type="email" id="footer-mail" name="e-mail" placeholder="Your E-mail" aria-label="Введите ваш email" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$">
+            <input type="email" id="footer-mail" name="e-mail" placeholder="Your E-mail" aria-label="Введите ваш email" pattern="^(?:[-a-z\d\+\*\/\?!{}~_%&'=^$#]+(?:\.[-a-z\d\+\*\/\?!{}~_%&'=^$#]+)*)@(?:[-a-z\d_]+\.){1,60}[a-z]{2,6}$" required>
             <button type="submit" aria-label="Sign up">Sign Up</button>
           </form>
         </div>

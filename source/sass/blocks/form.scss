@@ -1,8 +1,14 @@
-.form {
+.form--no-js {
+  width: 100%;
+  flex-direction: column;
+  transition-duration: 300ms;
+  padding: 0 0 20px;
+}
+
+.form--close,
+.form--open {
   @include tablet {
     width: 439px;
-    flex-direction: column;
-    transition-duration: 300ms;
     position: absolute;
     background-color: $white;
     z-index: 5;
@@ -32,11 +38,8 @@
     overflow-y: auto;
     transform: translateX(0%);
     transition-duration: 100ms;
-    top: 0;
-    left: 0;
     right: 0;
     margin: 0;
-    z-index: 4;
   }
 }
 
@@ -44,7 +47,6 @@ form {
   width: 250px;
   display: flex;
   flex-direction: column;
-
 
   @include tablet {
     width: 100%;
@@ -90,6 +92,12 @@ form {
   @include mobile {
     top: 60px;
     right: 15px;
+  }
+}
+
+.form__toggle-menu--no-js {
+  @include tablet {
+    display: none;
   }
 }
 

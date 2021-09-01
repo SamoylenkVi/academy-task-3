@@ -13,6 +13,11 @@
 
     const accordions = catalog.querySelectorAll('.form__filter');
     const filterMenu = catalog.querySelector('.form');
+    const filterButton = catalog.querySelector('.form__toggle-menu');
+
+    filterMenu.classList.remove('form--no-js');
+    filterButton.classList.remove('form__toggle-menu--no-js');
+    filterMenu.classList.add('form--close');
 
     const toggleVisibility = (evt) => {
       const isTargetClicked = evt.target.tagName === H3_TAG_NAME;
