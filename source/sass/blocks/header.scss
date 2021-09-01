@@ -22,7 +22,7 @@
   @include tablet {
     flex-direction: column;
     background-color: $checked-brown;
-    padding: 137px 45px 0;
+    padding: 137px 45px 50px;
     transition-duration: 300ms;
     position: absolute;
     width: 100%;

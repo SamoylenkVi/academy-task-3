@@ -1,6 +1,7 @@
 .catalog-promo {
   background-image: url("../img/catalog-promo@1x.jpg");
   background-size: cover;
+  background-color: $checked-brown;
 
   @include retina {
     background-image: url("../img/catalog-promo@2x.jpg");
