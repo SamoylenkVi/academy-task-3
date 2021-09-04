@@ -14,6 +14,9 @@
     const accordions = catalog.querySelectorAll('.form__filter');
     const filterMenu = catalog.querySelector('.form');
     const filterButton = catalog.querySelector('.form__toggle-menu');
+    const page = document.querySelector('.page');
+    const pageUnderlay = document.querySelector('.page__underlay');
+    const footer = document.querySelector('.footer');
 
     filterMenu.classList.remove('form--no-js');
     filterButton.classList.remove('form__toggle-menu--no-js');
@@ -42,6 +45,9 @@
       if (filterMenu) {
         filterMenu.classList.toggle('form--close');
         filterMenu.classList.toggle('form--open');
+        page.classList.toggle('fixed');
+        pageUnderlay.classList.toggle('page__underlay--fixed');
+        footer.classList.toggle('fixed');
       }
     };
 

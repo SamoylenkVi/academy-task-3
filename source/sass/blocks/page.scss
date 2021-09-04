@@ -8,3 +8,23 @@
 .page h2 {
   @include font-options($family-cormorant, $title-font-size, $title-line-height, $bold-font-weight, $base-color);
 }
+
+.page.fixed {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.page__underlay {
+  display: none;
+  background-color: $black;
+  opacity: 0.5;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+
+  &--fixed {
+    display: block;
+  }
+}

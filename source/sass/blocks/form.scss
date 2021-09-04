@@ -138,6 +138,15 @@ form {
   padding-bottom: 6px;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    color: $catalog-brown;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -189,16 +198,16 @@ form {
 }
 
 .form__filter li {
-  padding-left: 35px;
+  margin-left: 35px;
   padding-bottom: 10px;
 
   @include tablet {
-    padding-left: 39px;
+    margin-left: 39px;
     padding-bottom: 17px;
   }
 
   @include mobile {
-    padding-left: 50px;
+    margin-left: 50px;
   }
 }
 
@@ -207,6 +216,19 @@ form {
   line-height: $price-line-height;
   position: relative;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $catalog-brown;
+
+    &::before {
+      border-color: $catalog-brown;
+    }
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 
   @include tablet {
     font-size: $base-font-size;

@@ -64,12 +64,27 @@
 
   @include tablet {
     row-gap: 37px;
-    grid-template-columns: repeat(auto-fill, minmax(206px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   @include mobile {
     row-gap: 27px;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.catalog__content li {
+  margin: 0 auto;
+  max-width: 270px;
+
+  @include tablet {
+    max-width: 206px;
+  }
+
+  @include mobile {
+    max-width: 130px;
   }
 }
 

@@ -40,7 +40,7 @@
     position: absolute;
     content: "";
     top: 50%;
-    right: 7px;
+    right: 50px;
     width: 12px;
     height: 12px;
     border: 1px solid $checked-brown;
@@ -61,7 +61,8 @@
 
   @include tablet {
     &::before {
-      right: 2px;
+      right: 51px;
+      top: 57px;
       width: 18px;
       height: 18px;
     }
@@ -71,6 +72,8 @@
     font-size: $base-font-size;
 
     &::before {
+      right: 26px;
+      top: 39px;
       width: 15px;
       height: 15px;
       transform: translateY(-160%) rotate(-45deg);
@@ -81,47 +84,52 @@
 .faq__wrapper dd {
   display: none;
   max-width: 527px;
-  margin: 7px 7px 0;
+  margin: 7px 49px 44px;
   line-height: $link-line-height;
 
   @include tablet {
     max-width: 535px;
-    margin: 27px 0 1px;
+    margin: 27px 49px 43px;
   }
 
   @include mobile {
-    margin: 13px 29px 4px 0;
+    margin: 13px 54px 19px 24px;
     font-size: $link-font-size;
     line-height: $base-line-height;
   }
 }
 
 .faq__item {
-  padding: 43px;
+  padding: 0;
   border: 1px solid $checked-brown;
 
   &:not(:first-child) {
     margin-top: -1px;
   }
 
-  @include tablet {
-    padding: 43px 49px;
-  }
-
   @include mobile {
     min-height: 83px;
-    padding: 18px 24px 15px;
   }
 }
 
-.faq__item--open {
+.faq__item a {
+  padding: 43px;
+
+  @include tablet {
+    padding: 43px 49px 44px;
+  }
+
   @include mobile {
-    padding-top: 15px;
+    padding: 16px 52px 18px 24px;
   }
 }
 
 .faq__item--open dd {
   display: block;
+}
+
+.faq__item--open a {
+  padding-bottom: 0;
 }
 
 .faq__item--open a::before {

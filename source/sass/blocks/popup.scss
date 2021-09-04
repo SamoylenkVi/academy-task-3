@@ -145,6 +145,8 @@
 .popup__form input {
   margin-bottom: 33px;
   cursor: pointer;
+  appearance: none;
+  color: $base-color;
 
   @include mobile {
     padding-left: 0;

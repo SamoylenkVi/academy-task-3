@@ -4,10 +4,10 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 129px;
-  padding-top: 43px;
+  padding-top: 42px;
 
   @include tablet {
-    padding-top: 56px;
+    padding-top: 53px;
     margin-bottom: 79px;
   }
 
@@ -71,6 +71,7 @@
   }
 
   @include mobile {
+    max-width: 290px;
     grid-template-rows: 133px 87px 87px;
     column-gap: 24px;
     row-gap: 27px;

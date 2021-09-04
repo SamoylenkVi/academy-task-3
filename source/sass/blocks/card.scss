@@ -20,10 +20,12 @@
 
 .card--catalog img {
   height: 272px;
+  width: 270px;
   object-fit: cover;
 
   @include tablet {
     height: 208px;
+    width: 206px;
   }
 
   @include mobile {
