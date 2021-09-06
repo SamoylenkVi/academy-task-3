@@ -7,7 +7,7 @@
   padding-top: 42px;
 
   @include tablet {
-    padding-top: 53px;
+    padding-top: 55px;
     margin-bottom: 79px;
   }
 
@@ -68,6 +68,7 @@
     grid-template-rows: 133px 87px;
     column-gap: 16px;
     row-gap: 20px;
+    max-width: 677px;
   }
 
   @include mobile {

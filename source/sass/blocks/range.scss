@@ -1,5 +1,13 @@
 .range {
-  padding-top: 19px;
+  padding: 0 24px 18px;
+
+  @include tablet {
+    padding: 8px 86px 20px 31px;
+  }
+
+  @include mobile {
+    padding: 9px 11px 10px 10px;
+  }
 }
 
 .range__controls {
@@ -32,7 +40,7 @@
   background-color: $checked-brown;
 
   @include tablet {
-    left: 21%;
+    left: 17%;
     width: 56%;
   }
 
@@ -68,7 +76,7 @@
   left: 22%;
 
   @include tablet {
-    left: 18%;
+    left: 15%;
   }
 
   @include mobile {
@@ -117,7 +125,7 @@
     left: 18%;
 
     @include tablet {
-      left: 14%;
+      left: 11%;
     }
 
     @include mobile {
@@ -126,7 +134,7 @@
   }
 
   &:last-of-type {
-    right: 1%;
+    right: 2%;
 
     @include mobile {
       right: 4%;

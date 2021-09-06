@@ -70,7 +70,7 @@
   @include mobile {
     row-gap: 27px;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
   }
 }

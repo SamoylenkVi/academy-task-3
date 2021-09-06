@@ -1,5 +1,4 @@
 .form--no-js {
-  width: 100%;
   flex-direction: column;
   transition-duration: 300ms;
   padding: 0 0 20px;
@@ -50,6 +49,7 @@ form {
 
   @include tablet {
     width: 100%;
+    padding-bottom: 35px;
   }
 }
 
@@ -96,28 +96,21 @@ form {
 }
 
 .form__toggle-menu--no-js {
-  @include tablet {
-    display: none;
-  }
+  display: none;
 }
 
 .form__filter {
   display: flex;
   flex-direction: column;
   border: 1px solid $checked-brown;
-  padding: 24px 25px 17px 25px;
+  padding: 0;
   margin-top: -1px;
   position: relative;
 
   @include tablet {
     border: none;
     border-bottom: 1px solid $checked-brown;
-    padding: 36px 87px 20px 21px;
     margin-top: 0;
-  }
-
-  @include mobile {
-    padding: 24px 10px 10px;
   }
 }
 
@@ -131,16 +124,28 @@ form {
   }
 }
 
-.form__filter h3 {
+.form__button-toggle {
   font-weight: $medium-font-weight;
   font-size: $base-font-size;
   margin: 0;
-  padding-bottom: 6px;
   cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 67px;
+  padding: 10px 43px 10px 25px;
 
   &:hover,
   &:focus {
-    color: $catalog-brown;
+    color: $checked-brown;
+
+    &::before {
+      transition-duration: 500ms;
+      transform: translate3d(0, -15%, 0);
+    }
   }
 
   &:active {
@@ -162,7 +167,9 @@ form {
   @include tablet {
     font-size: $questions-font-size;
     line-height: $questions-line-height;
-    padding-bottom: 12px;
+    min-height: 75px;
+    padding: 21px 64px 6px 22px;
+    margin-bottom: 6px;
 
     &::before {
       background-size: 100%;
@@ -172,7 +179,9 @@ form {
   }
 
   @include mobile {
-    padding: 0 31px 14px 11px;
+    padding: 10px 43px 11px 21px;
+    min-height: 71px;
+    margin: 0;
 
     &::before {
       background-size: 86%;
@@ -182,23 +191,46 @@ form {
   }
 }
 
-.form__filter--close h3 {
+.form__button-toggle--close {
   &::before {
     background-image: url("../img/close-filter.svg");
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      transform: translate3d(0, 15%, 0);
+    }
+  }
+
+  @include tablet {
+    padding: 10px 64px 10px 22px;
+    min-height: 92px;
+    margin: 0;
+  }
+
+  @include mobile {
+    padding: 10px 43px 11px 21px;
+    min-height: 71px;
+    margin: 0;
   }
 }
 
 .form__filter ul {
   @include list-default-remove;
-  padding-top: 16px;
+  padding: 0 26px 17px;
 
   @include tablet {
-    padding-top: 10px;
+    padding: 0 22px 19px;
+  }
+
+  @include mobile {
+    padding-bottom: 10px;
   }
 }
 
 .form__filter li {
-  margin-left: 35px;
+  margin-left: 34px;
   padding-bottom: 10px;
 
   @include tablet {
@@ -207,7 +239,7 @@ form {
   }
 
   @include mobile {
-    margin-left: 50px;
+    margin-left: 37px;
   }
 }
 
@@ -216,19 +248,7 @@ form {
   line-height: $price-line-height;
   position: relative;
   cursor: pointer;
-
-  &:hover,
-  &:focus {
-    color: $catalog-brown;
-
-    &::before {
-      border-color: $catalog-brown;
-    }
-  }
-
-  &:active {
-    opacity: 30%;
-  }
+  outline: none;
 
   @include tablet {
     font-size: $base-font-size;
@@ -256,6 +276,19 @@ form {
 
 .form__filter-checkbox input:checked + label::before {
   background-color: $checked-brown;
+}
+
+.form__filter-checkbox input:hover + label,
+.form__filter-checkbox input:focus + label {
+  color: $checked-brown;
+
+  &::before {
+    opacity: 50%;
+  }
+}
+
+.form__filter-checkbox input:active + label {
+  opacity: 30%;
 }
 
 .form__button {
@@ -298,10 +331,10 @@ form {
   }
 
   @include mobile {
-    margin: 30px 19px 5px 22px;
+    margin: 30px 21px 5px 20px;
 
     &--reset {
-      margin-top: 16px;
+      margin-top: 15px;
     }
   }
 }

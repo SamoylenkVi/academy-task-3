@@ -83,12 +83,13 @@
       </section>
       <section class="catalog">
         <div class="catalog__wrapper wrapper">
+          <h2 class="visually-hidden">Catalog</h2>
           <button type="button" class="catalog__toggle" aria-label="Open catalog filter" data-filter-button="open">Filter</button>
           <div class="catalog__form form form--no-js">
             <form action="https://echo.htmlacademy.ru/" method="get">
               <button type="button" class="form__toggle-menu form__toggle-menu--no-js" aria-label="Close catalog filter" data-filter-button="close"></button>
               <div class="form__filter form__filter-checkbox">
-                <h3>Product</h3>
+                <button class="form__button-toggle" aria-label="Open filter menu" type="button">Product</button>
                 <ul>
                   <li>
                     <input class="visually-hidden" type="checkbox" name="necklaces" id="necklaces" aria-label="Украшения на шею" checked>
@@ -109,7 +110,7 @@
                 </ul>
               </div>
               <div class="form__filter form__filter-checkbox">
-                <h3>Material</h3>
+                <button type="button" class="form__button-toggle" aria-label="Open filter menu">Material</button>
                 <ul>
                   <li>
                     <input class="visually-hidden" type="checkbox" name="gold" id="gold-filter" aria-label="Золото">
@@ -122,7 +123,7 @@
                 </ul>
               </div>
               <div class="form__filter form__filter-checkbox">
-                <h3>Collection</h3>
+                <button type="button" class="form__button-toggle" aria-label="Open filter menu">Collection</button>
                 <ul>
                   <li>
                     <input class="visually-hidden" type="checkbox" name="pink-flamingo" id="pink-flamingo-filter" aria-label="Pink-flamingo">
@@ -135,7 +136,7 @@
                 </ul>
               </div>
               <div class="form__filter form__filter--price">
-                <h3>Price</h3>
+                <button type="button" class="form__button-toggle" aria-label="Open filter menu">Price</button>
                 <div class="form__filter-range range">
                   <div class="range__controls">
                     <div class="range__scale">

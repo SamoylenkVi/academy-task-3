@@ -146,6 +146,7 @@
   margin-bottom: 33px;
   cursor: pointer;
   appearance: none;
+  border-radius: 0;
   color: $base-color;
 
   @include mobile {

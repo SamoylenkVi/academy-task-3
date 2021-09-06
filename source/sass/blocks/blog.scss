@@ -47,9 +47,10 @@
 .blog__content-wrapper {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(auto-fill, 570px);
   gap: 30px;
+  justify-content: center;
 
   @include tablet {
     display: flex;

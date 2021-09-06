@@ -1,6 +1,5 @@
 'use strict';
 (function () {
-  const H3_TAG_NAME = 'H3';
   const OPEN_FILTER_BUTTON = 'open';
   const CLOSE_FILTER_BUTTON = 'close';
 
@@ -11,9 +10,9 @@
       return;
     }
 
-    const accordions = catalog.querySelectorAll('.form__filter');
     const filterMenu = catalog.querySelector('.form');
     const filterButton = catalog.querySelector('.form__toggle-menu');
+    const filterButtonsToggle = catalog.querySelectorAll('.form__button-toggle');
     const page = document.querySelector('.page');
     const pageUnderlay = document.querySelector('.page__underlay');
     const footer = document.querySelector('.footer');
@@ -22,24 +21,18 @@
     filterButton.classList.remove('form__toggle-menu--no-js');
     filterMenu.classList.add('form--close');
 
-    const toggleVisibility = (evt) => {
-      const isTargetClicked = evt.target.tagName === H3_TAG_NAME;
 
-      if (isTargetClicked) {
-        accordions.forEach((accordion) => {
-          if (evt.currentTarget === accordion) {
-            accordion.classList.toggle('form__filter--close');
-          }
-        });
-      }
+    const toggleVisibilityHandler = (evt) => {
+      evt.target.classList.toggle('form__button-toggle--close');
+      evt.target.parentNode.classList.toggle('form__filter--close');
+      evt.target.parentNode.classList.toggle('form__filter--open');
     };
 
-    if (accordions && accordions.length > 0) {
-      accordions.forEach((accordion) => {
-        accordion.classList.add('form__filter--close');
-        accordion.addEventListener('click', toggleVisibility);
-      });
-    }
+    filterButtonsToggle.forEach((button) => {
+      button.parentNode.classList.add('form__filter--close');
+      button.classList.add('form__button-toggle--close');
+      button.addEventListener('click', toggleVisibilityHandler);
+    });
 
     const changeFiltersVisibility = () => {
       if (filterMenu) {
